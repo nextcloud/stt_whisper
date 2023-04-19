@@ -123,6 +123,11 @@ jobs:
         run: |
           ./occ stt_whisper:transcribe $(pwd)/apps/${{env.APP_NAME}}/test/fixtures/jfk.wav > output.txt
 
+      - name: Show log on failure
+        if: failure()
+        run: |
+          tail data/nextcloud.log
+
       - name: Check transcript
         run: |
           diff $(pwd)/apps/${{env.APP_NAME}}/test/fixtures/jfk.wav.txt output.txt
