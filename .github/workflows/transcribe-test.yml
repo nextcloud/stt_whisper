@@ -127,6 +127,8 @@ jobs:
         if: failure()
         run: |
           tail data/nextcloud.log
+          diff $(pwd)/apps/${{env.APP_NAME}}/test/fixtures/jfk.wav.txt output.txt
+
 
       - name: Check transcript
         run: |
