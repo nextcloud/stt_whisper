@@ -13,6 +13,11 @@ Speech-To-Text provider running OpenAI Whisper locally
 
 The models run completely on your machine. No private data leaves your servers.
 
+Requires:
+
+ * Architecture: x86_64
+ * OS: Linux
+
 After installing this app you will need to run
 
     occ translate:download-models [model-name]

@@ -4,9 +4,13 @@ SPDX-License-Identifier: CC0-1.0
 -->
 
 # Whisper Speech-To-Text
-Speech-To-Text provider running OpenAI Whisper locally
+Speech-To-Text provider for Nextcloud running OpenAI Whisper locally
 
 The model runs completely on your machine. No private data leaves your servers.
+
+## Requirements
+ * Architecture: x86-64
+ * OS: Linux
 
 ## Install
  * Place this app in **nextcloud/apps/**
@@ -27,3 +31,4 @@ This requires the following things to be present:
 * tar: for building the archive
 * curl: used if phpunit and composer are not installed to fetch them from the web
 * npm: for building and testing everything JS, only required if a package.json is placed inside the **js/** folder
+* gcc: for building whisper.cpp
