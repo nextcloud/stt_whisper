@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Whisper Speech-To-Text
+Upstream-Contact: Marcel Klehr <mklehr@gmx.net>
+Source: https://github.com/nextcloud/stt_whisper
+
+Files: package-lock.json package.json composer.json composer.lock CHANGELOG.md .php-cs-fixer.dist.php
+Copyright: Marcel Klehr <mklehr@gmx.net>
+License: AGPL-3.0-or-later
