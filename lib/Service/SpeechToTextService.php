@@ -67,6 +67,7 @@ class SpeechToTextService {
 		$this->logger->debug('Running ' . var_export($command, true));
 
 		$proc = new Process($command, __DIR__);
+        $proc->setTimeout(null);
 		try {
 			$exitCode = $proc->run();
 			if ($exitCode !== 0) {
@@ -109,6 +110,7 @@ class SpeechToTextService {
 		$this->logger->debug('Running ' . var_export($command, true));
 
 		$proc = new Process($command, __DIR__);
+        $proc->setTimeout(null);
 		try {
 			$exitCode = $proc->run();
 			if ($exitCode !== 0) {
