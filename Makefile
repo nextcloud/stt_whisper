@@ -75,14 +75,14 @@ models/small: whisper.cpp/models/ggml-small.bin
 
 bin/main:
 	cd whisper.cpp && make clean && make
-	cp whisper.cpp/main bin/main-x86_64
+	cp whisper.cpp/main bin/main
 
 
 bin/main-musl:
 	cd whisper.cpp && make clean && make \
 	-E 'CFLAGS += -D_POSIX_SOURCE -D_GNU_SOURCE' \
 	-E 'CXXFLAGS += -D_POSIX_SOURCE -D_GNU_SOURCE'
-	cp whisper.cpp/main bin/main-x86_64-musl
+	cp whisper.cpp/main bin/main-musl
 
 # Fetches the PHP and JS dependencies and compiles the JS. If no composer.json
 # is present, the composer step is skipped, if no package.json or js/package.json
