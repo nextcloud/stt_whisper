@@ -120,6 +120,7 @@ npm:
 ifeq (,$(wildcard $(CURDIR)/package.json))
 	cd js && $(npm) run build
 else
+	npm ci
 	npm run build
 endif
 
