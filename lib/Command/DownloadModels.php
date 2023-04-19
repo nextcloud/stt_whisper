@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 namespace OCA\SttWhisper\Command;
 
-use OCA\Translate\Service\DownloadModelsService;
+use OCA\SttWhisper\Service\DownloadModelsService;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
