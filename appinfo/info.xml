@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <!--
+    SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
+    SPDX-License-Identifier: CC0-1.0
+    -->
+    <id>stt_whisper</id>
+    <name>Whisper Speech-To-Text</name>
+    <summary>Speech-To-Text provider running OpenAI Whisper locally</summary>
+    <description><![CDATA[
+Speech-To-Text provider running OpenAI Whisper locally
+
+The models run completely on your machine. No private data leaves your servers.
+
+After installing this app you will need to run
+
+    occ translate:download-models [model-name]
+
+where [model-name] is one of
+
+ * small
+ * medium (default)
+ * large
+]]></description>
+    <version>1.0.0</version>
+    <licence>agpl</licence>
+    <author mail="mklehr@gmx.net" homepage="https://marcelklehr.de">Marcel Klehr</author>
+    <namespace>SttWhisper</namespace>
+    <category>tools</category>
+    <bugs>https://github.com/nextcloud/stt_whisper/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="27" max-version="27"/>
+    </dependencies>
+
+    <repair-steps>
+        <post-migration>
+            <step>OCA\SttWhisper\Migration\InstallDeps</step>
+        </post-migration>
+        <install>
+            <step>OCA\SttWhisper\Migration\InstallDeps</step>
+        </install>
+    </repair-steps>
+
+    <commands>
+        <command>OCA\SttWhisper\Command\DownloadModels</command>
+    </commands>
+
+</info>

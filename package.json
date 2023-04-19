@@ -1,0 +1,32 @@
+{
+  "name": "stt_whisper",
+  "description": "Speech-To-Text provider running OpenAI Whisper locally",
+  "version": "1.0.0",
+  "author": "Marcel Klehr <mklehr@gmx.net>",
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/nextcloud/stt_whisper/issues"
+  },
+  "license": "agpl",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Nothing to be done'",
+    "dev": "echo 'Nothing to be done'",
+    "watch": "echo 'Nothing to be done'",
+    "serve": "echo 'Nothing to be done'",
+    "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "stylelint": "stylelint css/*.css css/*.scss src/**/*.scss src/**/*.vue",
+    "stylelint:fix": "stylelint css/*.css css/*.scss src/**/*.scss src/**/*.vue --fix"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^4.4.0"
+  },
+  "browserslist": [
+    "extends @nextcloud/browserslist-config"
+  ],
+  "engines": {
+    "node": "^16.0.0",
+    "npm": "^7.0.0 || ^8.0.0"
+  }
+}
