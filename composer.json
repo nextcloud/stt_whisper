@@ -1,0 +1,42 @@
+{
+	"require": {
+		"php": ">=8.0",
+		"bamarni/composer-bin-plugin": "^1.8"
+	},
+	"autoload": {
+		"psr-4": {
+			"OCA\\SttWhisper\\": "lib/"
+		}
+	},
+	"require-dev": {
+		"nextcloud/ocp": "dev-master"
+	},
+	"scripts": {
+		"lint": "find . -name \\*.php -not -path './vendor/*' -print0 | xargs -0 -n1 php -l",
+		"cs:check": "php-cs-fixer fix --dry-run --diff",
+		"cs:fix": "php-cs-fixer fix",
+		"psalm": "psalm.phar",
+		"test:unit": "phpunit --config tests/phpunit.xml",
+		"post-install-cmd": [
+			"@composer bin all install --ansi",
+			"composer dump-autoload"
+		],
+		"post-update-cmd": [
+			"@composer bin all update --ansi",
+			"composer dump-autoload"
+		]
+	},
+	"config": {
+		"platform": {
+			"php": "8.0"
+		},
+		"allow-plugins": {
+			"bamarni/composer-bin-plugin": true,
+			"composer/package-versions-deprecated": true
+		},
+		"autoloader-suffix": "SttWhisper",
+		"classmap-authoritative": true,
+		"optimize-autoloader": true,
+		"sort-packages": true
+	}
+}

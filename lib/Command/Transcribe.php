@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 // SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -12,8 +13,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class Transcribe extends Command {
 	public function __construct(
-        private SpeechToTextService $stt
-    ) {
+		private SpeechToTextService $stt
+	) {
 		parent::__construct();
 	}
 

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 // SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -15,7 +16,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 class DownloadModels extends Command {
 	private DownloadModelsService $downloader;
 
-    public const DEFAULT_MODELS = ['medium'];
+	public const DEFAULT_MODELS = ['medium'];
 
 	public function __construct(DownloadModelsService $downloader) {
 		parent::__construct();
@@ -46,12 +47,12 @@ class DownloadModels extends Command {
 		try {
 			$models = array_intersect($input->getArgument('models'), DownloadModelsService::AVAILABLE_MODELS);
 			foreach ($models as $model) {
-                $output->writeln("Downloading model ".$model);
-                if ($this->downloader->download($model, $input->getOption('force'))) {
-                    $output->writeln('Successful');
-                } else {
-                    $output->writeln('Model is not available, skipping');
-                }
+				$output->writeln("Downloading model ".$model);
+				if ($this->downloader->download($model, $input->getOption('force'))) {
+					$output->writeln('Successful');
+				} else {
+					$output->writeln('Model is not available, skipping');
+				}
 			}
 		} catch (\Exception $ex) {
 			$output->writeln('<error>Failed to download models</error>');

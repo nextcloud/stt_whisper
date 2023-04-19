@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 // SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -31,11 +32,11 @@ class SpeechToText implements ISpeechToTextProvider {
 
 	public function transcribeFile(File $file): string {
 		try {
-            $filePath = $file->getStorage()->getLocalFile($file->getPath());
+			$filePath = $file->getStorage()->getLocalFile($file->getPath());
 			return $this->transcriber->transcribe($filePath);
 		} catch(\RuntimeException|NotFoundException $e) {
 			$this->logger->warning('Translation failed with: ' . $e->getMessage(), ['exception' => $e]);
 			throw new \RuntimeException('Translation failed with: ' . $e->getMessage());
 		}
-    }
+	}
 }
