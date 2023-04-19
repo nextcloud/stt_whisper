@@ -101,6 +101,7 @@ class SpeechToTextService {
             '-ac', 1,
             '-c:a', 'pcm_s16le',
             '-threads', $threads,
+            '-y',
             $outputPath
         ];
 
