@@ -43,4 +43,9 @@ where [model-name] is one of
         <command>OCA\SttWhisper\Command\Transcribe</command>
     </commands>
 
+    <settings>
+        <admin>OCA\SttWhisper\Settings\AdminSettings</admin>
+        <admin-section>OCA\SttWhisper\Settings\AdminSection</admin-section>
+    </settings>
+
 </info>

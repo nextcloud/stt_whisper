@@ -10,10 +10,9 @@
   "license": "agpl",
   "private": true,
   "scripts": {
-    "build": "echo 'Nothing to be done'",
-    "dev": "echo 'Nothing to be done'",
-    "watch": "echo 'Nothing to be done'",
-    "serve": "echo 'Nothing to be done'",
+    "build": "NODE_ENV=production webpack --progress --config webpack.js",
+    "dev": "NODE_ENV=development webpack --progress --config webpack.js",
+    "watch": "NODE_ENV=development webpack --progress --watch --config webpack.js",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --ext .js,.vue src --fix",
     "stylelint": "stylelint css/*.css css/*.scss src/**/*.scss src/**/*.vue",
@@ -21,6 +20,23 @@
   },
   "dependencies": {
     "ffmpeg-static": "^4.4.0"
+  },
+  "devDependencies": {
+    "@nextcloud/axios": "^2.3.0",
+    "@nextcloud/babel-config": "^1.0.0",
+    "@nextcloud/browserslist-config": "^2.3.0",
+    "@nextcloud/eslint-config": "^8.1.4",
+    "@nextcloud/initial-state": "^2.0.0",
+    "@nextcloud/router": "^2.0.0",
+    "@nextcloud/stylelint-config": "^2.2.0",
+    "@nextcloud/vue": "^7.7.1",
+    "@nextcloud/webpack-vue-config": "^5.4.0",
+    "@vue/test-utils": "^1.1.3",
+    "async-parallel": "^1.2.3",
+    "fast-glob": "^3.2.11",
+    "flickr-sdk": "^6.0.0",
+    "google-img-scrap": "^1.0.6",
+    "vue": "^2.7.14"
   },
   "browserslist": [
     "extends @nextcloud/browserslist-config"

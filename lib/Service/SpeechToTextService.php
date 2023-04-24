@@ -126,7 +126,7 @@ class SpeechToTextService {
 	}
 
 	public function getFfmpegBinary() : string {
-		return $this->settings->getSetting('ffmpeg_binary') ?: __DIR__ . '/../../node_modules/ffmpeg-static/ffmpeg';
+		return $this->settings->getSetting('ffmpeg_binary') === '""' || !$this->settings->getSetting('ffmpeg_binary') ? __DIR__ . '/../../node_modules/ffmpeg-static/ffmpeg' : $this->settings->getSetting('ffmpeg_binary');
 	}
 
 	public function getWhisperBinary(): string {
