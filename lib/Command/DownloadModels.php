@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace OCA\SttWhisper\Command;
 
 use OCA\SttWhisper\Service\DownloadModelsService;
+use OCA\SttWhisper\Service\SettingsService;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -16,7 +17,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 class DownloadModels extends Command {
 	private DownloadModelsService $downloader;
 
-	public const DEFAULT_MODELS = ['medium'];
+	public const DEFAULT_MODELS = [SettingsService::DEFAULTS['model']];
 
 	public function __construct(DownloadModelsService $downloader) {
 		parent::__construct();

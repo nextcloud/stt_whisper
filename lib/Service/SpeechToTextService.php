@@ -5,8 +5,6 @@ declare(strict_types=1);
 // SPDX-License-Identifier: AGPL-3.0-or-later
 namespace OCA\SttWhisper\Service;
 
-use OCA\SttWhisper\AppInfo\Application;
-use OCP\IConfig;
 use OCP\ITempManager;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Process\Exception\ProcessTimedOutException;
@@ -15,9 +13,9 @@ use Symfony\Component\Process\Process;
 
 class SpeechToTextService {
 	public function __construct(
-		private IConfig $config,
 		private LoggerInterface $logger,
 		private ITempManager $tempManager,
+        private SettingsService $settings,
 	) {
 	}
 
@@ -42,7 +40,7 @@ class SpeechToTextService {
 	 * @return string The transcript of the media file
 	 */
 	public function transcribe(string $path) : string {
-		$model = $this->config->getAppValue(Application::APP_ID, 'model', 'medium');
+		$model = $this->settings->getSetting('model');
 		if (!in_array($model, DownloadModelsService::AVAILABLE_MODELS, true)) {
 			throw new \RuntimeException('Model not supported');
 		}
@@ -54,7 +52,7 @@ class SpeechToTextService {
 
 		$audioPath = $this->convertToWav($path);
 
-		$threads = (int) $this->config->getAppValue(Application::APP_ID, 'threads', '4');
+		$threads = (int) $this->settings->getSetting('threads');
 
 		$command = [
 			$this->getWhisperBinary(),
@@ -94,7 +92,7 @@ class SpeechToTextService {
 	public function convertToWav(string $inputPath): string {
 		$outputPath = $this->tempManager->getTemporaryFile('.wav');
 
-		$threads = (int) $this->config->getAppValue(Application::APP_ID, 'threads', '4');
+        $threads = (int) $this->settings->getSetting('threads');
 
 		$command = [
 			$this->getFfmpegBinary(),
@@ -127,15 +125,15 @@ class SpeechToTextService {
 		}
 	}
 
-	private function getFfmpegBinary() : string {
-		return __DIR__ . '/../../node_modules/ffmpeg-static/ffmpeg';
+	public function getFfmpegBinary() : string {
+		return $this->settings->getSetting('ffmpeg_binary') ?: __DIR__ . '/../../node_modules/ffmpeg-static/ffmpeg';
 	}
 
-	private function getWhisperBinary(): string {
+	public function getWhisperBinary(): string {
 		return __DIR__ . '/../../bin/main' . ($this->isMusl()? '-musl' : '');
 	}
 
-	protected function isAVXSupported(): bool {
+	public function isAVXSupported(): bool {
 		try {
 			$cpuinfo = file_get_contents('/proc/cpuinfo');
 		} catch (\Throwable $e) {
@@ -145,11 +143,9 @@ class SpeechToTextService {
 		return $cpuinfo !== false && strpos($cpuinfo, 'avx') !== false;
 	}
 
-	protected function isMusl(): ?bool {
+	public function isMusl(): ?bool {
 		try {
-			$cmd = 'ldd --version';
-
-			exec($cmd . ' 2>&1', $output, $returnCode);
+            exec('ldd /bin/sh' . ' 2>&1', $output, $returnCode);
 		} catch (\Throwable $e) {
 		}
 
@@ -157,6 +153,6 @@ class SpeechToTextService {
 			return null;
 		}
 
-		return str_contains(trim(implode("\n", $output)), 'GNU');
+		return str_contains(trim(implode("\n", $output)), 'musl');
 	}
 }
