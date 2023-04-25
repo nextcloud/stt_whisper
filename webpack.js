@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
+// SPDX-License-Identifier: AGPL-3.0-or-later
 const path = require('path')
 const webpackConfig = require('@nextcloud/webpack-vue-config')
 
