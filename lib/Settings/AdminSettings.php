@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 // SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
 // SPDX-License-Identifier: AGPL-3.0-or-later
@@ -28,11 +29,11 @@ class AdminSettings implements ISettings {
 		$this->initialState->provideInitialState('settings', $settings);
 
 		$modelsPath = __DIR__ . '/../../models';
-        $modelsDownloaded = array_combine(DownloadModelsService::AVAILABLE_MODELS,
-            array_map(function($model) use($modelsPath) {
-                return file_exists($modelsPath . '/' . $model);
-            }, DownloadModelsService::AVAILABLE_MODELS)
-        );
+		$modelsDownloaded = array_combine(DownloadModelsService::AVAILABLE_MODELS,
+			array_map(function ($model) use ($modelsPath) {
+				return file_exists($modelsPath . '/' . $model);
+			}, DownloadModelsService::AVAILABLE_MODELS)
+		);
 		$this->initialState->provideInitialState('modelsDownloaded', $modelsDownloaded);
 
 		return new TemplateResponse(Application::APP_ID, 'admin');

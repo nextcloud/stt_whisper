@@ -15,7 +15,7 @@ class SpeechToTextService {
 	public function __construct(
 		private LoggerInterface $logger,
 		private ITempManager $tempManager,
-        private SettingsService $settings,
+		private SettingsService $settings,
 	) {
 	}
 
@@ -92,7 +92,7 @@ class SpeechToTextService {
 	public function convertToWav(string $inputPath): string {
 		$outputPath = $this->tempManager->getTemporaryFile('.wav');
 
-        $threads = (int) $this->settings->getSetting('threads');
+		$threads = (int) $this->settings->getSetting('threads');
 
 		$command = [
 			$this->getFfmpegBinary(),
@@ -145,7 +145,7 @@ class SpeechToTextService {
 
 	public function isMusl(): ?bool {
 		try {
-            exec('ldd /bin/sh' . ' 2>&1', $output, $returnCode);
+			exec('ldd /bin/sh' . ' 2>&1', $output, $returnCode);
 		} catch (\Throwable $e) {
 		}
 
