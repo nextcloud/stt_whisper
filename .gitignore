@@ -3,8 +3,9 @@
 .idea
 *.iml
 /vendor/
+/vendor-bin
 /build/
 node_modules/
 /.php_cs.cache
-js/*hot-update.*
+js/
 /whisper.cpp
