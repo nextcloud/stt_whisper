@@ -30,7 +30,7 @@ class DownloadModels extends Command {
 	 * @return void
 	 */
 	protected function configure() {
-		$this->setName('stt-whisper:download-models')
+		$this->setName('stt_whisper:download-models')
 			->setDescription('Download the necessary machine learning models');
 		$this->addOption('force', 'f', InputOption::VALUE_NONE, 'Force download even if the model(s) are downloaded already');
 		$this->addArgument('models', InputArgument::IS_ARRAY, 'The models to download (available: small, medium, large)', self::DEFAULT_MODELS);
