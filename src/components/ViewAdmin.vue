@@ -13,7 +13,7 @@
 				{{ t('stt_whisper', 'Machine learning models have been downloaded successfully.') }}
 			</NcNoteCard>
 			<NcNoteCard v-else-if="modelsDownloaded && !Object.values(modelsDownloaded).some(Boolean)" type="error">
-				{{ t('stt_whisper', 'The machine learning models still need to be downloaded.') }}
+				{{ t('stt_whisper', 'The machine learning models still need to be downloaded (see below).') }}
 			</NcNoteCard>
 			<NcNoteCard v-if="ffmpeg === false" type="error">
 				{{ t('stt_whisper', 'Could not execute the ffmpeg executable. You may need to set the path to a working executable manually. (See below.)') }}
@@ -37,7 +37,7 @@
 			</template>
 		</NcSettingsSection>
 		<NcSettingsSection :title="t('stt_whisper', 'Whisper')">
-			<p>{{ t('stt_whisper', 'Select the machine learning model to be used for Speech-To-Text transcription. The larger the model the more resources like RAM, CPU and time are needed. However, the smaller the model, the less accurate the results will be.') }}</p>
+			<p>{{ t('stt_whisper', 'Select the machine learning model to be used for Speech-To-Text transcription. The larger the model the more resources like RAM, CPU and time are needed. However, the smaller the model, the less accurate the results will be. To use a model you need to download it using the following command:') }} <code>occ stt_whisper:download-models [small|medium|large]</code></p>
 			<p>
 				<NcCheckboxRadioSwitch :checked.sync="settings['model']" value="small" type="radio" @update:checked="onChange" :disabled="!modelsDownloaded['small']">
 					{{ t('stt_whisper', 'Small model (~1GB RAM, ~1x recording time, ~10-20% word error rate)') }}
