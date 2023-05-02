@@ -58,15 +58,15 @@
 					@update:value="onChange" />
 			</p>
 		</NcSettingsSection>
-		<NcSettingsSection :title="t('stt_whisper', 'Ffmpeg')">
+		<NcSettingsSection :title="t('stt_whisper', 'FFmpeg')">
 			<p v-if="ffmpeg === undefined">
-				<span class="icon-loading-small" />&nbsp;&nbsp;&nbsp;&nbsp;{{ t('stt_whisper', 'Checking Ffmpeg') }}
+				<span class="icon-loading-small" />&nbsp;&nbsp;&nbsp;&nbsp;{{ t('stt_whisper', 'Checking FFmpeg') }}
 			</p>
 			<NcNoteCard v-else-if="ffmpeg === false">
 				{{ t('stt_whisper', 'Could not execute the shipped ffmpeg executable. You may need to set the path to a working binary manually.') }}
 			</NcNoteCard>
 			<NcNoteCard v-else type="success">
-				{{ t('stt_whisper', 'Ffmpeg executable was installed successfully and works.') }}
+				{{ t('stt_whisper', 'FFmpeg executable was installed successfully and works.') }}
 			</NcNoteCard>
 			<p>
 				{{ t('stt_whisper', 'If the shipped ffmpeg executable doesn\'t work on your system for some reason you can set the path to a custom ffmpeg executable. Leave this empty to use the shipped executable.') }}
