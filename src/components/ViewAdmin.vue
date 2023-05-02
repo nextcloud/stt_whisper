@@ -39,13 +39,13 @@
 		<NcSettingsSection :title="t('stt_whisper', 'Whisper')">
 			<p>{{ t('stt_whisper', 'Select the machine learning model to be used for Speech-To-Text transcription. The larger the model the more resources like RAM, CPU and time are needed. However, the smaller the model, the less accurate the results will be.') }}</p>
 			<p>
-				<NcCheckboxRadioSwitch :checked.sync="settings['model']" value="small" type="radio" @update:checked="onChange">
+				<NcCheckboxRadioSwitch :checked.sync="settings['model']" value="small" type="radio" @update:checked="onChange" :disabled="!modelsDownloaded['small']">
 					{{ t('stt_whisper', 'Small model (~1GB RAM, ~1x recording time, ~10-20% word error rate)') }}
 				</NcCheckboxRadioSwitch>
-				<NcCheckboxRadioSwitch :checked.sync="settings['model']" value="medium" type="radio" @update:checked="onChange">
+				<NcCheckboxRadioSwitch :checked.sync="settings['model']" value="medium" type="radio" @update:checked="onChange" :disabled="!modelsDownloaded['medium']">
 					{{ t('stt_whisper', 'Medium model (~2GB RAM, ~3x recording time, ~7-15% word error rate)') }}
 				</NcCheckboxRadioSwitch>
-				<NcCheckboxRadioSwitch :checked.sync="settings['model']" value="large" type="radio" @update:checked="onChange">
+				<NcCheckboxRadioSwitch :checked.sync="settings['model']" value="large" type="radio" @update:checked="onChange" :disabled="!modelsDownloaded['large']">
 					{{ t('stt_whisper', 'Large model (~3.5GB RAM, ~5x recording time, ~4-12% word error rate)') }}
 				</NcCheckboxRadioSwitch>
 			</p>
