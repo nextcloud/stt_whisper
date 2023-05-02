@@ -58,6 +58,7 @@ class SpeechToTextService {
 			$this->getWhisperBinary(),
 			'-m', '../../models/'.$model,
 			'-t', $threads,
+			'-l', 'auto',
 			'--no-timestamps',
 			$audioPath,
 		];
