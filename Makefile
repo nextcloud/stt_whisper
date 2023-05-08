@@ -189,6 +189,7 @@ appstore:
 	--include=/composer.lock \
 	--include=/src \
 	--include=/lib \
+	--include=/l10n \
 	--include=/img \
 	--include=/appinfo \
 	--include=/bin \
