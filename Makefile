@@ -198,7 +198,6 @@ appstore:
 	--exclude=/models/** \
 	--exclude=**/*.map \
 	--exclude=/* \
-	--exclude=node \
 	$(CURDIR)/ $(sign_dir)/$(app_name)
 	tar -czf $(appstore_package_name).tar.gz \
 		-C $(sign_dir) $(app_name)

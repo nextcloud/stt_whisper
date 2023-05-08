@@ -3,6 +3,6 @@ Upstream-Name: Whisper Speech-To-Text
 Upstream-Contact: Marcel Klehr <mklehr@gmx.net>
 Source: https://github.com/nextcloud/stt_whisper
 
-Files: package-lock.json package.json composer.json composer.lock CHANGELOG.md .php-cs-fixer.dist.php vendor-bin/php-cs-fixer/composer.json src/*
+Files: package-lock.json package.json composer.json composer.lock CHANGELOG.md .php-cs-fixer.dist.php vendor-bin/php-cs-fixer/composer.json src/* .l10nignore .tx/*
 Copyright: Marcel Klehr <mklehr@gmx.net>
 License: AGPL-3.0-or-later
