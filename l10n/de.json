@@ -1,0 +1,5 @@
+{ "translations": {
+    "Status" : "Benötigt keine Übersetzung. Hier wird nur die formelle Übersetzung verwendet (de_DE).",
+    "Failed to load settings" : "Einstellungen konnten nicht geladen werden"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

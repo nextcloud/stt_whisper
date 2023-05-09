@@ -1,0 +1,6 @@
+{ "translations": {
+    "Status" : "Durum",
+    "Failed to load settings" : "Ayarlar yüklenemedi",
+    "Failed to save settings" : "Ayarlar kaydedilemedi"
+},"pluralForm" :"nplurals=2; plural=(n > 1);"
+}
