@@ -20,7 +20,7 @@ Requires:
 
 After installing this app you will need to run
 
-    occ translate:download-models [model-name]
+    occ stt_whisper:download-models [model-name]
 
 where [model-name] is one of
 
@@ -28,7 +28,7 @@ where [model-name] is one of
  * medium (default)
  * large
 ]]></description>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <licence>agpl</licence>
     <author mail="mklehr@gmx.net" homepage="https://marcelklehr.de">Marcel Klehr</author>
     <namespace>SttWhisper</namespace>
