@@ -179,6 +179,7 @@ appstore:
 	mkdir -p $(sign_dir)
 	rm -rf $(appstore_build_directory)
 	mkdir -p $(appstore_build_directory)
+	npm install --omit dev
 	rsync -a --delete \
 	--include=/CHANGELOG.md \
 	--include=/README.md \
@@ -196,6 +197,7 @@ appstore:
 	--include=/vendor \
 	--include=/templates \
 	--include=/js \
+	--include=/node_modules \
 	--include=/models \
 	--exclude=/models/** \
 	--exclude=**/*.map \
