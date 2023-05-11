@@ -7,7 +7,6 @@ declare(strict_types=1);
 namespace OCA\SttWhisper\Service;
 
 use FilesystemIterator;
-use OCA\Translate\Helper\TAR;
 use OCP\Http\Client\IClientService;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -54,19 +53,13 @@ class DownloadModelsService {
 				return true;
 			}
 		}
-		$archiveUrl = $this->getArchiveUrl($model);
-		$archivePath = __DIR__ . '/../../'. $model .'.tar.gz';
+		$modelUrl = $this->getModelUrl($model);
 		$timeout = $this->isCLI ? 0 : 480;
-		$this->clientService->newClient()->get($archiveUrl, ['sink' => $archivePath, 'timeout' => $timeout]);
-		$tarManager = new TAR($archivePath);
-		$tarFiles = $tarManager->getFiles();
-		$targetPath = __DIR__ . '/../../models/';
-		$tarManager->extractList($tarFiles, $targetPath);
-		unlink($archivePath);
+		$this->clientService->newClient()->get($modelUrl, ['sink' => $modelPath, 'timeout' => $timeout]);
 		return true;
 	}
 
-	public function getArchiveUrl(string $model): string {
-		return "https://github.com/nextcloud-releases/stt_whisper/releases/download/v1.0.0/$model.tar.gz";
+	public function getModelUrl(string $model): string {
+		return "https://download.nextcloud.com/server/apps/stt_whisper/ggml-$model.bin";
 	}
 }
