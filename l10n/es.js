@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Whisper Speech-To-Text" : "Dictado a texto Whisper",
     "Speech-To-Text provider running OpenAI Whisper locally" : "Proveedor de dictado a texto corriendo Whisper de OpenAI localmente",
-    "Speech-To-Text provider running OpenAI Whisper locally\n\nThe models run completely on your machine. No private data leaves your servers.\n\nRequires:\n\n * Architecture: x86_64\n * OS: Linux\n\nAfter installing this app you will need to run\n\n    occ translate:download-models [model-name]\n\nwhere [model-name] is one of\n\n * small\n * medium (default)\n * large" : "Proveedor de dictado a texto corriendo Whisper de OpenAI localmente\n\nLos modelos corren enteramente en su máquina. Ningún dato privado abandona sus servidores.\n\nRequiere:\n\n * Arquitectura: x86_64\n * SO: Linux\n\nLuego de instalar la app tendrá que ejecutar\n\n    occ translate:download-models [model-name]\n\ndonde [model-name] es alguno de los siguientes\n\n * small\n * medium (por defecto)\n * large",
     "Status" : "Estatus",
     "Machine learning models have been downloaded successfully." : "Los modelos de machine learning han sido descargados de forma satisfactoria.",
     "The machine learning models still need to be downloaded (see below)." : "Los modelos de machine learning todavía requieren ser descargados (vea abajo).",

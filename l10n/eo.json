@@ -1,4 +1,5 @@
 { "translations": {
-    "Failed to load settings" : "Ŝargo de agordoj malsukcesis"
+    "Failed to load settings" : "Ŝargo de agordoj malsukcesis",
+    "Failed to save settings" : "Konservo de agordoj malsukcesis"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
