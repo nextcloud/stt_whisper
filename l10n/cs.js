@@ -6,6 +6,7 @@ OC.L10N.register(
     "Status" : "Stav",
     "Machine learning models have been downloaded successfully." : "Modely strojového učení byly úspěšně staženy.",
     "The machine learning models still need to be downloaded (see below)." : "Pořád ještě je třeba stáhnout si modely strojového učení (viz níže).",
+    "Transcription job currently running" : "Přávě probíhá úloha přepisu na text",
     "Whisper" : "Whisper",
     "FFmpeg" : "FFmpeg",
     "Checking FFmpeg" : "Kontroluje se FFmpet",
