@@ -26,7 +26,7 @@ class SpeechToText implements ISpeechToTextProvider {
 
 	public function transcribeFile(File $file): string {
 		try {
-			$filePath = $file->getStorage()->getLocalFile($file->getPath());
+			$filePath = $file->getStorage()->getLocalFile($file->getInternalPath());
 			return $this->transcriber->transcribe($filePath);
 		} catch(\RuntimeException|NotFoundException $e) {
 			$this->logger->warning('Transcription failed with: ' . $e->getMessage(), ['exception' => $e]);
