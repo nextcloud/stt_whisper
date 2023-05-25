@@ -38,6 +38,15 @@ where [model-name] is one of
         <nextcloud min-version="27" max-version="27"/>
     </dependencies>
 
+    <repair-steps>
+        <post-migration>
+            <step>OCA\SttWhisper\Migration\SetBinaryPermissions</step>
+        </post-migration>
+        <install>
+            <step>OCA\SttWhisper\Migration\SetBinaryPermissions</step>
+        </install>
+    </repair-steps>
+
     <commands>
         <command>OCA\SttWhisper\Command\DownloadModels</command>
         <command>OCA\SttWhisper\Command\Transcribe</command>
