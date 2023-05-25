@@ -5,10 +5,16 @@ name: Transcribe test
 
 on:
   pull_request:
+    paths:
+      - 'lib/**'
+      - Makefile
   push:
     branches:
       - main
       - stable*
+    paths:
+      - 'lib/**'
+      - Makefile
 
 env:
   APP_NAME: stt_whisper
