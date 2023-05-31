@@ -28,7 +28,7 @@ where [model-name] is one of
  * medium (default)
  * large
 ]]></description>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <licence>agpl</licence>
     <author mail="mklehr@gmx.net" homepage="https://marcelklehr.de">Marcel Klehr</author>
     <namespace>SttWhisper</namespace>
