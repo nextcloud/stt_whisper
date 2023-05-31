@@ -100,6 +100,7 @@ class SpeechToTextService {
 			'-i', $inputPath,
 			'-ar', 16000,
 			'-ac', 1,
+            '-af', 'silenceremove=window=1:detection=peak:stop_periods=-1:stop_silence=7:start_threshold=-70dB:stop_threshold=-70dB', // remove silence >5s
 			'-c:a', 'pcm_s16le',
 			'-threads', $threads,
 			'-y',
