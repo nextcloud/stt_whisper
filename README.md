@@ -12,12 +12,36 @@ The model runs completely on your machine. No private data leaves your servers.
  * Architecture: x86-64
  * OS: Linux
 
+## Ethical AI Rating
+### Rating: 🟡
+
+Positive:
+* the software for training and inference of this model is open source
+* the trained model is freely available, and thus can be run on-premises
+
+Negative:
+* the training data is not freely available, limiting the ability of external parties to check and correct for bias or optimise the model’s performance and CO2 usage.
+
+Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud.com/blog/nextcloud-ethical-ai-rating/).
+
 ## Install
  * Place this app in **nextcloud/apps/**
 
 or 
 
  * Install from the Nextcloud appstore
+
+### Download models
+
+After installing this app you will need to run
+
+    occ stt_whisper:download-models [model-name]
+
+where [model-name] is one of
+
+* small
+* medium (default)
+* large
 
 ## Building the app
 
