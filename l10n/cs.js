@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Whisper Speech-To-Text" : "Whisper - převod řeči na text",
     "Speech-To-Text provider running OpenAI Whisper locally" : "Poskytovatel převodu řeči na text, pomocí OpenAI Whisper, provozovaném přímo na serveru",
-    "Speech-To-Text provider running OpenAI Whisper locally\n\nThe models run completely on your machine. No private data leaves your servers.\n\nRequires:\n\n * Architecture: x86_64\n * OS: Linux\n\nAfter installing this app you will need to run\n\n    occ stt_whisper:download-models [model-name]\n\nwhere [model-name] is one of\n\n * small\n * medium (default)\n * large" : "Poskytovatel převodu řeči na text, vytvářený pomocí aplikace Whisper od OpenAI, provozované přímo na Nextcloud serveru\n\nModel běží zcela na vašem stroji, žádná soukromá data neodcházejí mimo vaše servery.\n\nVyžaduje:\n\n * Architektura: x86_64\n * OS: Linux\n\nPo instalaci této aplikace je zapotřebí spustit\n\n    occ stt_whisper:download-models [model-name]\n\nkde [model-name] je jedno z\n\n * small\n * medium (default)\n * large",
     "Status" : "Stav",
     "Machine learning models have been downloaded successfully." : "Modely strojového učení byly úspěšně staženy.",
     "The machine learning models still need to be downloaded (see below)." : "Pořád ještě je třeba stáhnout si modely strojového učení (viz níže).",

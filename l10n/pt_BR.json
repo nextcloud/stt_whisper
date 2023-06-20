@@ -1,7 +1,6 @@
 { "translations": {
     "Whisper Speech-To-Text" : "Sussurro Fala-Para-Texto",
     "Speech-To-Text provider running OpenAI Whisper locally" : "Provedor Fala-Para-Texto executando o OpenAI Whisper localmente",
-    "Speech-To-Text provider running OpenAI Whisper locally\n\nThe models run completely on your machine. No private data leaves your servers.\n\nRequires:\n\n * Architecture: x86_64\n * OS: Linux\n\nAfter installing this app you will need to run\n\n    occ stt_whisper:download-models [model-name]\n\nwhere [model-name] is one of\n\n * small\n * medium (default)\n * large" : "Provedor Voz-Para-Texto executando o OpenAI Whisper localmente\n\nOs modelos rodam totalmente na sua máquina. Nenhum dado privado deixa seus servidores.\n\nRequerimentos:\n\n * Arquitatura: x86_64\n * OS: Linux\n\nDepois de instalar este aplicativo, você precisará executar\n\n    occ stt_whisper:download-models [model-name]\n\nonde [nome do modelo] é um dos\n\n * pequeno\n * medio (padão)\n * grande",
     "Status" : "Status",
     "Machine learning models have been downloaded successfully." : "Os modelos de aprendizado de máquina foram baixados com sucesso.",
     "The machine learning models still need to be downloaded (see below)." : "Os modelos de aprendizado de máquina ainda precisam ser baixados (veja abaixo).",

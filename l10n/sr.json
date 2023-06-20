@@ -1,7 +1,6 @@
 { "translations": {
     "Whisper Speech-To-Text" : "Whisper говор-у-текст",
     "Speech-To-Text provider running OpenAI Whisper locally" : "Пружалац услуге претварања говора-у-текст који локално извршава OpenAI Whisper",
-    "Speech-To-Text provider running OpenAI Whisper locally\n\nThe models run completely on your machine. No private data leaves your servers.\n\nRequires:\n\n * Architecture: x86_64\n * OS: Linux\n\nAfter installing this app you will need to run\n\n    occ stt_whisper:download-models [model-name]\n\nwhere [model-name] is one of\n\n * small\n * medium (default)\n * large" : "Пружалац услуге претварања говора-у-текст који локално извршава OpenAI Whisper\n\nМодели се у потпуности извршавају на вашој машини. Никакви приватни подаци не напуштају ваше сервере.\n\nПотребно је:\n\n * Архитектура: x86_64\n * ОС: Linux\n\nКада инсталирате ову апликацију, мораћете да извршите\n\n    occ stt_whisper:download-models [име-модела]\n\nгде је [име-модела] једно од\n\n * small\n * medium (подразумевано)\n * large",
     "Status" : "Стање",
     "Machine learning models have been downloaded successfully." : "Успешно су преузети модели машинског учења.",
     "The machine learning models still need to be downloaded (see below)." : "Још увек је потребно да се преузму модели машинског учења (погледајте испод).",

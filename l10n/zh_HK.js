@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Whisper Speech-To-Text" : "Whisper 語音轉文本",
     "Speech-To-Text provider running OpenAI Whisper locally" : "在近端運行 OpenAI Whisper 的語音轉文本提供程序",
-    "Speech-To-Text provider running OpenAI Whisper locally\n\nThe models run completely on your machine. No private data leaves your servers.\n\nRequires:\n\n * Architecture: x86_64\n * OS: Linux\n\nAfter installing this app you will need to run\n\n    occ stt_whisper:download-models [model-name]\n\nwhere [model-name] is one of\n\n * small\n * medium (default)\n * large" : "在近端執行 OpenAI Whisper 的語音轉文字提供程式\n\n模型完全在您的機器上執行。不會有任何私人資料離開您的伺服器。\n\n需求：\n\n * 架構：x86_64\n * 作業系統：Linux\n\n安裝此應用程式後，您必須執行\n\n    occ stt_whisper:download-models [model-name]\n\n[model-name] 是以下的其中一個：\n\n * small\n * medium（預設）\n * large",
     "Status" : "狀態",
     "Machine learning models have been downloaded successfully." : "已成功下載機器學習模型。",
     "The machine learning models still need to be downloaded (see below)." : "機器學習模型仍需下載（見下方）。",

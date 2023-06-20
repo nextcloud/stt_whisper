@@ -1,7 +1,6 @@
 { "translations": {
     "Whisper Speech-To-Text" : "Whisper konuşmadan yazıya",
     "Speech-To-Text provider running OpenAI Whisper locally" : "Yerel olarak OpenAI Whisper çalıştıran konuşmayı metne dönüştürücü",
-    "Speech-To-Text provider running OpenAI Whisper locally\n\nThe models run completely on your machine. No private data leaves your servers.\n\nRequires:\n\n * Architecture: x86_64\n * OS: Linux\n\nAfter installing this app you will need to run\n\n    occ stt_whisper:download-models [model-name]\n\nwhere [model-name] is one of\n\n * small\n * medium (default)\n * large" : "Yerel olarak OpenAI Whisper çalıştıran konuşmayı metne dönüştürücü\n\nModeller tamamen aygıtınızda çalışır. Herhangi bir kişisel veri sunucularınızdan ayrılmaz.\n\nGereksinimler:\n\n* Mimari: x86_64\n* İşletim sistemi: Linux\n\nBu uygulamayı kurduktan sonra çalıştırmanız gerekecek\n\nocc stt_whisper:download-models [model-adı]\n\nburada [model-adı] şunlardan biridir:\n\n* small\n* medium (varsayılan)\n* large",
     "Status" : "Durum",
     "Machine learning models have been downloaded successfully." : "Makine öğrenmesi modelleri indirildi.",
     "The machine learning models still need to be downloaded (see below)." : "Makine öğrenmesi modellerinin indirilmesi gerekiyor (aşağıya bakın).",
