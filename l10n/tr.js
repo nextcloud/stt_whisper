@@ -24,7 +24,7 @@ OC.L10N.register(
     "FFmpeg" : "FFmpeg",
     "Checking FFmpeg" : "FFmpeg denetleniyor",
     "Could not execute the shipped ffmpeg executable. You may need to set the path to a working binary manually." : "Paketteki FFmpeg dosyası yürütülemedi. Çalışan bir binary dosyasının yolunu el ile ayarlamanız gerekebilir.",
-    "FFmpeg executable was installed successfully and works." : "Kurulabilir FFmpeg dosyası kuruldu ve çalışıyor.",
+    "FFmpeg executable was installed successfully and works." : "Yürütülebilir FFmpeg dosyası kuruldu ve çalışıyor.",
     "If the shipped ffmpeg executable doesn't work on your system for some reason you can set the path to a custom ffmpeg executable. Leave this empty to use the shipped executable." : "Paketteki yürütülebilir FFmpeg dosyası herhangi bir nedenle sisteminizde çalışmazsa, özel bir yürütülebilir FFmpeg dosyasının yolunu ayarlayabilirsiniz. Paketteki yürütülebilir dosyanın kullanılması için bu alanı boş bırakın.",
     "Failed to load settings" : "Ayarlar yüklenemedi",
     "Failed to save settings" : "Ayarlar kaydedilemedi"
