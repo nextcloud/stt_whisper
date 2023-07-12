@@ -1,7 +1,7 @@
 {
   "name": "stt_whisper",
   "description": "Speech-To-Text provider running OpenAI Whisper locally",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Marcel Klehr <mklehr@gmx.net>",
   "contributors": [],
   "bugs": {
