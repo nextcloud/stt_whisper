@@ -35,7 +35,6 @@
 			"composer/package-versions-deprecated": true
 		},
 		"autoloader-suffix": "SttWhisper",
-		"classmap-authoritative": true,
 		"optimize-autoloader": true,
 		"sort-packages": true
 	}
