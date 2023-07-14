@@ -16,10 +16,10 @@
 				{{ t('stt_whisper', 'The machine learning models still need to be downloaded (see below).') }}
 			</NcNoteCard>
 			<NcNoteCard v-if="ffmpeg === false" type="error">
-				{{ t('stt_whisper', 'Could not execute the ffmpeg executable. You may need to set the path to a working executable manually. (See below.)') }}
+				{{ t('stt_whisper', 'Could not execute the FFmpeg executable. You may need to set the path to a working executable manually. (See below.)') }}
 			</NcNoteCard>
 			<NcNoteCard v-if="whisper === false" type="error">
-				{{ t('stt_whisper', 'Could not execute the whisper executable. You may need to compile whisper yourself for it to run on this server\'s processor architecture.') }}
+				{{ t('stt_whisper', 'Could not execute the Whisper executable. You may need to compile whisper yourself for it to run on this server\'s processor architecture.') }}
 			</NcNoteCard>
 			<NcNoteCard v-if="avx === false" type="error">
 				{{ t('stt_whisper', 'It seems that your server processor does not support AVX instructions. Without AVX instructions this app currently does not work.') }}
@@ -63,13 +63,13 @@
 				<span class="icon-loading-small" />&nbsp;&nbsp;&nbsp;&nbsp;{{ t('stt_whisper', 'Checking FFmpeg') }}
 			</p>
 			<NcNoteCard v-else-if="ffmpeg === false">
-				{{ t('stt_whisper', 'Could not execute the shipped ffmpeg executable. You may need to set the path to a working binary manually.') }}
+				{{ t('stt_whisper', 'Could not execute the shipped FFmpeg executable. You may need to set the path to a working binary manually.') }}
 			</NcNoteCard>
 			<NcNoteCard v-else type="success">
 				{{ t('stt_whisper', 'FFmpeg executable was installed successfully and works.') }}
 			</NcNoteCard>
 			<p>
-				{{ t('stt_whisper', 'If the shipped ffmpeg executable doesn\'t work on your system for some reason you can set the path to a custom ffmpeg executable. Leave this empty to use the shipped executable.') }}
+				{{ t('stt_whisper', 'If the shipped FFmpeg executable doesn\'t work on your system for some reason you can set the path to a custom FFmpeg executable. Leave this empty to use the shipped executable.') }}
 			</p>
 			<p>
 				<input v-model="settings['ffmpeg_binary']" type="text" @change="onChange">
