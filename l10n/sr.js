@@ -7,8 +7,6 @@ OC.L10N.register(
     "Status" : "Стање",
     "Machine learning models have been downloaded successfully." : "Успешно су преузети модели машинског учења.",
     "The machine learning models still need to be downloaded (see below)." : "Још увек је потребно да се преузму модели машинског учења (погледајте испод).",
-    "Could not execute the ffmpeg executable. You may need to set the path to a working executable manually. (See below.)" : "Не може да се изврши ffmpeg извршни фајл. Вероватно је потребно да ручно поставите путању до исправног извршног фајла. (Погледајте испод.)",
-    "Could not execute the whisper executable. You may need to compile whisper yourself for it to run on this server's processor architecture." : "Не може да се изврши whisper извршни фајл. Вероватно је потребно сами компајлирате whisper тако да се извршава на архитектури овог сервера.",
     "It seems that your server processor does not support AVX instructions. Without AVX instructions this app currently does not work." : "Изгледа да процесор вашег сервера не подржава AVX инструкције. Without AVX instructions this app currently does not work. Без AVX инструкција, ова апликација тренутно не може да ради.",
     "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Позадински послови се не извршавају са cron. Ова апликација захтева да се позадински послови извршавају са cron.",
     "The app was installed successfully and will transcribe files in background processes on request." : "Апликација је успешно инсталирана и на захтев ће у позадинским процесима да транскрибује фајлове.",
@@ -23,9 +21,7 @@ OC.L10N.register(
     "The number of threads to use (for both transcoding media files to audio as well as the transcription process)" : "Број нити који ће се користити (и за процес транскодирања медијских фајлова у аудио, и за процес транскрипције)",
     "FFmpeg" : "FFmpeg",
     "Checking FFmpeg" : "Проверава се FFmpeg",
-    "Could not execute the shipped ffmpeg executable. You may need to set the path to a working binary manually." : "Не може да се изврши испоручени ffmpeg извршни фајл. Вероватно је потребно да ручно поставите путању до исправног бинарног фајла.",
     "FFmpeg executable was installed successfully and works." : "FFmpeg извршни фајл је успешно инсталиран и ради како треба.",
-    "If the shipped ffmpeg executable doesn't work on your system for some reason you can set the path to a custom ffmpeg executable. Leave this empty to use the shipped executable." : "Ако испоручени ffmpeg извршни фајл из неког разлога не ради на вашем систему, можете да поставите путању до произвољног ffmpeg извршног фајла. Оставите ово подешавање празно ако желите да се користи испоручени извршни фајл.",
     "Failed to load settings" : "Грешка у дохватању поставки",
     "Failed to save settings" : "Грешка приликом чувања поставки"
 },

@@ -7,8 +7,6 @@ OC.L10N.register(
     "Status" : "Status",
     "Machine learning models have been downloaded successfully." : "Machine learning models have been downloaded successfully.",
     "The machine learning models still need to be downloaded (see below)." : "The machine learning models still need to be downloaded (see below).",
-    "Could not execute the ffmpeg executable. You may need to set the path to a working executable manually. (See below.)" : "Could not execute the ffmpeg executable. You may need to set the path to a working executable manually. (See below.)",
-    "Could not execute the whisper executable. You may need to compile whisper yourself for it to run on this server's processor architecture." : "Could not execute the whisper executable. You may need to compile whisper yourself for it to run on this server's processor architecture.",
     "It seems that your server processor does not support AVX instructions. Without AVX instructions this app currently does not work." : "It seems that your server processor does not support AVX instructions. Without AVX instructions this app currently does not work.",
     "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron.",
     "The app was installed successfully and will transcribe files in background processes on request." : "The app was installed successfully and will transcribe files in background processes on request.",
@@ -23,9 +21,7 @@ OC.L10N.register(
     "The number of threads to use (for both transcoding media files to audio as well as the transcription process)" : "The number of threads to use (for both transcoding media files to audio as well as the transcription process)",
     "FFmpeg" : "FFmpeg",
     "Checking FFmpeg" : "Checking FFmpeg",
-    "Could not execute the shipped ffmpeg executable. You may need to set the path to a working binary manually." : "Could not execute the shipped ffmpeg executable. You may need to set the path to a working binary manually.",
     "FFmpeg executable was installed successfully and works." : "FFmpeg executable was installed successfully and works.",
-    "If the shipped ffmpeg executable doesn't work on your system for some reason you can set the path to a custom ffmpeg executable. Leave this empty to use the shipped executable." : "If the shipped ffmpeg executable doesn't work on your system for some reason you can set the path to a custom ffmpeg executable. Leave this empty to use the shipped executable.",
     "Failed to load settings" : "Failed to load settings",
     "Failed to save settings" : "Failed to save settings"
 },

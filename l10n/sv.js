@@ -6,7 +6,6 @@ OC.L10N.register(
     "Status" : "Status",
     "Machine learning models have been downloaded successfully." : "Maskininlärningsmodeller har laddats ned.",
     "The machine learning models still need to be downloaded (see below)." : "Maskininlärningsmodellerna behöver fortfarande laddas ner (se nedan).",
-    "Could not execute the ffmpeg executable. You may need to set the path to a working executable manually. (See below.)" : "Kunde inte exekvera den körbara filen ffmpeg. Du kan behöva ställa in sökvägen till en fungerande körbar fil manuellt. (Se nedan.)",
     "Whisper" : "Whisper",
     "Failed to load settings" : "Kunde inte läsa in inställningar",
     "Failed to save settings" : "Kunde inte spara inställningarna"

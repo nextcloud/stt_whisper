@@ -7,7 +7,6 @@ OC.L10N.register(
     "Status" : "État",
     "Machine learning models have been downloaded successfully." : "Les modèles d'IA ont été téléchargés avec succès.",
     "The machine learning models still need to be downloaded (see below)." : "Les modèles d'intelligence artificielle doivent encore être téléchargés (voir ci-dessous).",
-    "Could not execute the ffmpeg executable. You may need to set the path to a working executable manually. (See below.)" : "Impossible d'exécuter la commande ffmpeg. Vous devrez peut-être spécifier manuellement le chemin vers un exécutable valable (voir ci-dessous).",
     "Transcription job currently running" : "Travail de transcription en cours",
     "No transcription job currently running" : "Aucun travail de transcription n'est en cours",
     "Whisper" : "Whisper",
@@ -16,9 +15,7 @@ OC.L10N.register(
     "Large model (~3.5GB RAM, ~5x recording time, ~4-12% word error rate)" : "Grand modèle (~3.5GB de RAM, ~5x le temps d'enregistrement, taux d'erreur par mot de~4-12%)",
     "FFmpeg" : "FFmpeg",
     "Checking FFmpeg" : "Vérification de FFmpeg",
-    "Could not execute the shipped ffmpeg executable. You may need to set the path to a working binary manually." : "Impossible d'exécuter l'exécutable ffmpeg fournie avec l'extension. Vous devrez peut-être spécifier un chemin vers une copie fonctionnelle du programme.",
     "FFmpeg executable was installed successfully and works." : "L'exécutable FFmpeg a été installé avec succès et fonctionne.",
-    "If the shipped ffmpeg executable doesn't work on your system for some reason you can set the path to a custom ffmpeg executable. Leave this empty to use the shipped executable." : "Si pour une raison inconnue l'exécutable ffmpeg livré avec l'extension ne fonctionne pas sur votre système, vous pouvez indiquer le chemin vers un exécutable fonctionnel. Laisser cette case vide pour utiliser la version livrée avec cette extension.",
     "Failed to load settings" : "Echec du chargement des paramètres",
     "Failed to save settings" : "Échec de l'enregistrement des paramètres"
 },

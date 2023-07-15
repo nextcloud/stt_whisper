@@ -7,8 +7,6 @@ OC.L10N.register(
     "Status" : "Estatus",
     "Machine learning models have been downloaded successfully." : "Los modelos de machine learning han sido descargados de forma satisfactoria.",
     "The machine learning models still need to be downloaded (see below)." : "Los modelos de machine learning todavía requieren ser descargados (vea abajo).",
-    "Could not execute the ffmpeg executable. You may need to set the path to a working executable manually. (See below.)" : "No se pudo ejecutar el ejecutable de ffmpeg. Es probable que necesite establecer la ruta a un ejecutable funcional manualmente. (Vea abajo)",
-    "Could not execute the whisper executable. You may need to compile whisper yourself for it to run on this server's processor architecture." : "No se pudo ejecutar el ejecutable de whisper. Es probable que necesite compilar whisper por su cuenta para que este corra en la arquitectura del procesador de este servidor.",
     "It seems that your server processor does not support AVX instructions. Without AVX instructions this app currently does not work." : "Al parecer, el procesador de su servidor no soporta las instrucciones AVX. Sin AVX esta app actualmente no funciona.",
     "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Los trabajos en segundo plano no están siendo ejecutados a través de cron. Esta app requiere que los trabajos en segundo plano sean ejecutados a través de cron.",
     "The app was installed successfully and will transcribe files in background processes on request." : "Esta app fue instalada de manera exitosa y transcribirá los archivos en procesos en segundo plano bajo solicitud.",
@@ -23,9 +21,7 @@ OC.L10N.register(
     "The number of threads to use (for both transcoding media files to audio as well as the transcription process)" : "El número de hilos de ejecución a utilizar (tanto para hacer transcodificación de los archivos de medios a audio, así como para el proceso mismo de transcodificación)",
     "FFmpeg" : "FFmpeg",
     "Checking FFmpeg" : "Chequeando FFmpeg",
-    "Could not execute the shipped ffmpeg executable. You may need to set the path to a working binary manually." : "No se pudo ejecutar el ejecutable de ffmpeg provisto. Es probable que necesite establecer la ruta a un ejecutable funcional manualmente.",
     "FFmpeg executable was installed successfully and works." : "El ejecutable de FFmpeg fue instalado exitosamente y funciona.",
-    "If the shipped ffmpeg executable doesn't work on your system for some reason you can set the path to a custom ffmpeg executable. Leave this empty to use the shipped executable." : "Si el ejecutable de FFmpeg provisto no funciona en su sistema por alguna razón, puede establecer la ruta a un ejecutable ffmpeg personalizado. Deje esto en blanco para utilizar el ejecutable provisto.",
     "Failed to load settings" : "Fallo al cargar configuraciones",
     "Failed to save settings" : "Fallo al guardar configuraciones"
 },

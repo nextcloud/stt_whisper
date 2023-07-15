@@ -5,8 +5,6 @@
     "Status" : "Status",
     "Machine learning models have been downloaded successfully." : "Die Modelle für maschinelles Lernen wurden erfolgreich heruntergeladen.",
     "The machine learning models still need to be downloaded (see below)." : "Die Modelle für maschinelles Lernen müssen noch heruntergeladen werden (siehe unten).",
-    "Could not execute the ffmpeg executable. You may need to set the path to a working executable manually. (See below.)" : "Die ffmpeg-Datei konnte nicht ausgeführt werden. Möglicherweise müssen Sie den Pfad zu einer funktionierenden ausführbaren Datei manuell festlegen. (Siehe unten.)",
-    "Could not execute the whisper executable. You may need to compile whisper yourself for it to run on this server's processor architecture." : "Die Whisper-Datei konnte nicht ausgeführt werden. Möglicherweise müssen Sie Whisper selbst kompilieren, damit es auf der Prozessorarchitektur dieses Servers ausgeführt werden kann.",
     "It seems that your server processor does not support AVX instructions. Without AVX instructions this app currently does not work." : "Es scheint, dass Ihr Serverprozessor keine AVX-Anweisungen unterstützt. Ohne AVX-Anweisungen funktioniert diese App aktuell nicht.",
     "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Hintergrundaufgaben werden nicht über Cron ausgeführt. Für diese App müssen Hintergrundaufgaben über Cron ausgeführt werden.",
     "The app was installed successfully and will transcribe files in background processes on request." : "Die App wurde erfolgreich installiert und transkribiert Dateien auf Anforderung im Hintergrund.",
@@ -21,9 +19,7 @@
     "The number of threads to use (for both transcoding media files to audio as well as the transcription process)" : "Die Anzahl der zu verwendenden Prozesse (sowohl für die Transkodierung von Mediendateien in Audio als auch für den Transkriptionsprozess)",
     "FFmpeg" : "FFmpeg",
     "Checking FFmpeg" : "Prüfe FFmpeg",
-    "Could not execute the shipped ffmpeg executable. You may need to set the path to a working binary manually." : "Die mitgelieferte ffmpeg-Datei konnte nicht ausgeführt werden. Möglicherweise müssen Sie den Pfad zu einer funktionierenden Binärdatei manuell festlegen.",
     "FFmpeg executable was installed successfully and works." : "Die ausführbare Datei FFmpeg wurde erfolgreich installiert und funktioniert.",
-    "If the shipped ffmpeg executable doesn't work on your system for some reason you can set the path to a custom ffmpeg executable. Leave this empty to use the shipped executable." : "Wenn die mitgelieferte ffmpeg-Datei aus irgendeinem Grund auf Ihrem System nicht funktioniert, können Sie den Pfad zu einer benutzerdefinierten ffmpeg-Datei festlegen. Lassen Sie dieses Feld leer, um die mitgelieferte ausführbare Datei zu verwenden.",
     "Failed to load settings" : "Einstellungen konnten nicht geladen werden",
     "Failed to save settings" : "Einstellungen konnten nicht gespeichert werden"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
