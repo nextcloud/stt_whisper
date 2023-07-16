@@ -7,6 +7,8 @@ OC.L10N.register(
     "Status" : "狀態",
     "Machine learning models have been downloaded successfully." : "已成功下載機器學習模型。",
     "The machine learning models still need to be downloaded (see below)." : "機器學習模型仍需下載（見下方）。",
+    "Could not execute the FFmpeg executable. You may need to set the path to a working executable manually. (See below.)" : "無法執行 ffmpeg 可執行檔。您可能需要手動設定可運作的可執行檔。（見下。）",
+    "Could not execute the Whisper executable. You may need to compile whisper yourself for it to run on this server's processor architecture." : "無法執行 Whisper 可執行檔。您可能需要自行編譯 Whisper 才能在此伺服器的處理器架構上執行。",
     "It seems that your server processor does not support AVX instructions. Without AVX instructions this app currently does not work." : "您的伺服器處理器似乎不支援 AVX 指令。若無 AVX 指令，此應用程式目前無法運作。",
     "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "背景作業並未透過 cron 執行。此應用程式需要背景作業透過 cron 執行。",
     "The app was installed successfully and will transcribe files in background processes on request." : "應用程式已成功安裝，並將根據要求在背景處理程序中轉錄檔案。",
@@ -21,7 +23,9 @@ OC.L10N.register(
     "The number of threads to use (for both transcoding media files to audio as well as the transcription process)" : "要使用的執行緒數量（用於將媒體檔案轉碼為音訊以及轉錄流程）",
     "FFmpeg" : "FFmpeg",
     "Checking FFmpeg" : "正在檢查 FFmpeg",
+    "Could not execute the shipped FFmpeg executable. You may need to set the path to a working binary manually." : "無法執行隨附的 ffmpeg 可執行檔。您可能需要手動設定可運作的二進位檔案。",
     "FFmpeg executable was installed successfully and works." : "FFmpeg 可執行文件已成功安裝並運行。",
+    "If the shipped FFmpeg executable doesn't work on your system for some reason you can set the path to a custom FFmpeg executable. Leave this empty to use the shipped executable." : "如果隨附的 ffmpeg 可執行檔因為某種原因無法在您的系統上執行，您可以將路徑設定為自訂的 ffmpeg 可執行檔。將此留空以使用附帶的可執行檔。",
     "Failed to load settings" : "載入設定失敗",
     "Failed to save settings" : "設定儲存失敗"
 },
