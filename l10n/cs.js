@@ -6,6 +6,8 @@ OC.L10N.register(
     "Status" : "Stav",
     "Machine learning models have been downloaded successfully." : "Modely strojového učení byly úspěšně staženy.",
     "The machine learning models still need to be downloaded (see below)." : "Pořád ještě je třeba stáhnout si modely strojového učení (viz níže).",
+    "Could not execute the FFmpeg executable. You may need to set the path to a working executable manually. (See below.)" : "Nedaří se spustit soubor, obsahující FFmpeg. Může být třeba ručně nastavit popis umístění funkčního spustitelného souboru (viz níže).",
+    "Could not execute the Whisper executable. You may need to compile whisper yourself for it to run on this server's processor architecture." : "Nepodařilo se spustit soubor s Whisper. Nejspíš bude potřeba si whisper zkompilovat sami pro spouštění na architektuře procesoru tohoto serveru.",
     "It seems that your server processor does not support AVX instructions. Without AVX instructions this app currently does not work." : "Zdá se, že procesor serveru nepodporuje instrukce AVX. Bez nich tato aplikace v současnosti nefunguje.",
     "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Úlohy na pozadí nejsou vykonávány prostřednictvím plánovače cron. Tato aplikace ovšem vyžaduje, aby tomu tak bylo.",
     "The app was installed successfully and will transcribe files in background processes on request." : "Aplikace byla úspěšně nainstalována a na vyžádání bude v procesech na pozadí provádět přepis ze souborů do textu.",
@@ -20,7 +22,9 @@ OC.L10N.register(
     "The number of threads to use (for both transcoding media files to audio as well as the transcription process)" : "Počet vláken které použít (pro jak převádění souborů s médii na zvuk, tak pro proces přepisu do textu)",
     "FFmpeg" : "FFmpeg",
     "Checking FFmpeg" : "Kontroluje se FFmpet",
+    "Could not execute the shipped FFmpeg executable. You may need to set the path to a working binary manually." : "Nedaří se spustit společně s aplikací dodaný FFmepeg. Může být třeba ručně nastavit popis umístění fungujícího spustitelného souboru s ním.",
     "FFmpeg executable was installed successfully and works." : "Spustitelný soubor s FFmpeg byl úspěšně nainstalován a funguje.",
+    "If the shipped FFmpeg executable doesn't work on your system for some reason you can set the path to a custom FFmpeg executable. Leave this empty to use the shipped executable." : "Pokud společně s aplikací dodávaný spustitelný soubor s FFmpeg na vašem systému z nějakého důvodu nefunguje, je možné nastavit popis umístění uživatelsky určeného spustitelného souboru s FFmpeg. Pokud chcete používat s aplikací dodávaný spustitelný soubor, nevyplňujte.",
     "Failed to load settings" : "Nepodařilo se načíst nastavení",
     "Failed to save settings" : "Nastavení se nepodařilo uložit"
 },
