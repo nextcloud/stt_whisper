@@ -9,8 +9,14 @@ Speech-To-Text provider for Nextcloud running OpenAI Whisper locally
 The model runs completely on your machine. No private data leaves your servers.
 
 ## Requirements
- * Architecture: x86-64
+ * Architecture: x86-64 with AVX support
  * OS: Linux
+
+## Model sizes
+
+* Small: 500MB
+* Medium: 1.5Gb
+* Large: 3.1GB
 
 ## Ethical AI Rating
 ### Rating: 🟡

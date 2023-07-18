@@ -13,10 +13,15 @@ Speech-To-Text provider running OpenAI Whisper locally
 
 The models run completely on your machine. No private data leaves your servers.
 
-Requires:
-
- * Architecture: x86_64
+Requirements:
+ * Architecture: x86-64 with AVX support
  * OS: Linux
+
+Model sizes:
+
+* Small: 500MB
+* Medium: 1.5Gb
+* Large: 3.1GB
 
 After installing this app you will need to run
 
