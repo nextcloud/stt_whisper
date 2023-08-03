@@ -25,7 +25,7 @@ OC.L10N.register(
     "Checking FFmpeg" : "Comprobación de FFmpeg",
     "Could not execute the shipped FFmpeg executable. You may need to set the path to a working binary manually." : "Non foi posíbel executar o executábel de FFmpeg fornecido. Quizais necesite estabelecer manualmente a ruta a un executábel que funcione. (vexa embaixo.)",
     "FFmpeg executable was installed successfully and works." : "O executábel FFmpeg foi instalado correctamente e funciona.",
-    "If the shipped FFmpeg executable doesn't work on your system for some reason you can set the path to a custom FFmpeg executable. Leave this empty to use the shipped executable." : "Se o executábel FFmpeg fornecido non funciona no seu sistema por algún motivo, pode definir a ruta a un executábel FFmpeg personalizado. Deixe isto baleiro para usar o executábel fornecido.",
+    "If the shipped FFmpeg executable doesn't work on your system for some reason you can set the path to a custom FFmpeg executable. Leave this empty to use the shipped executable." : "Se o executábel FFmpeg fornecido non funciona no seu sistema por algún motivo, pode estabelecer a ruta a un executábel FFmpeg personalizado. Deixe isto baleiro para usar o executábel fornecido.",
     "Failed to load settings" : "Produciuse un fallo ao cargar os axustes",
     "Failed to save settings" : "Produciuse un fallo ao gardar os axustes"
 },
