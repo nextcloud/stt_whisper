@@ -3,8 +3,10 @@ SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
 SPDX-License-Identifier: CC0-1.0
 -->
 
+![](https://raw.githubusercontent.com/nextcloud/stt_whisper/main/screenshots/Logo.png)
+
 # Whisper Speech-To-Text
-Speech-To-Text provider for Nextcloud running OpenAI Whisper locally
+Speech-To-Text provider for Nextcloud running OpenAI Whisper locally on CPU.
 
 The model runs completely on your machine. No private data leaves your servers.
 
