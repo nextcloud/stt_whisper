@@ -1,6 +1,7 @@
 OC.L10N.register(
     "stt_whisper",
     {
+    "Status" : "Статус",
     "Failed to load settings" : "Неуспешно вчитување на параметрите",
     "Failed to save settings" : "Неуспешно зачувување на параметрите"
 },
