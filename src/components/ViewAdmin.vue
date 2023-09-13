@@ -203,7 +203,6 @@ export default {
 
 		async setValue(setting, value) {
 			try {
-				value = JSON.stringify(value)
 				await axios.put(generateUrl(`/apps/stt_whisper/admin/settings/${setting}`), {
 					value,
 				})

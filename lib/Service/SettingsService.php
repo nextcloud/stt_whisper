@@ -13,7 +13,7 @@ class SettingsService {
 	public const DEFAULTS = [
 		'ffmpeg_binary' => '',
 		'model' => 'medium',
-		'threads' => 4,
+		'threads' => '4',
 	];
 
 	public function __construct(
@@ -26,7 +26,7 @@ class SettingsService {
 	 * @return string
 	 */
 	public function getSetting(string $key): string {
-		return $this->config->getAppValue(Application::APP_ID, $key, json_encode(self::DEFAULTS[$key]));
+		return $this->config->getAppValue(Application::APP_ID, $key, self::DEFAULTS[$key]);
 	}
 
 	/**

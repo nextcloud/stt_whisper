@@ -40,7 +40,7 @@ class SpeechToTextService {
 	 * @return string The transcript of the media file
 	 */
 	public function transcribe(string $path) : string {
-		$model = json_decode($this->settings->getSetting('model'));
+		$model = $this->settings->getSetting('model');
 		if (!in_array($model, DownloadModelsService::AVAILABLE_MODELS, true)) {
 			throw new \RuntimeException('Model not supported');
 		}

@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace OCA\SttWhisper\Migration;
 
+use OCA\SttWhisper\Service\SettingsService;
 use OCP\Http\Client\IClientService;
 use OCP\IConfig;
 use OCP\Migration\IOutput;
@@ -21,14 +22,16 @@ class SetBinaryPermissions implements IRepairStep {
 	protected IConfig $config;
 	private string $binaryDir;
 	private string $ffmpegDir;
+    private SettingsService $settings;
 
-	public function __construct(IConfig $config, IClientService $clientService, LoggerInterface $logger) {
+    public function __construct(IConfig $config, IClientService $clientService, LoggerInterface $logger, SettingsService $settings) {
 		$this->config = $config;
 		$this->binaryDir = dirname(__DIR__, 2) . '/bin/';
 		$this->ffmpegDir = dirname(__DIR__, 2) . '/node_modules/ffmpeg-static/';
 		$this->clientService = $clientService;
 		$this->logger = $logger;
-	}
+        $this->settings = $settings;
+    }
 
 	public function getName(): string {
 		return 'Set binary permissions';
@@ -36,6 +39,13 @@ class SetBinaryPermissions implements IRepairStep {
 
 	public function run(IOutput $output): void {
 		$this->setBinariesPermissions();
+
+        // Migrate settings from json to pure strings
+        foreach ($this->settings->getAll() as $key => $value) {
+            if (str_starts_with($value, '"')) {
+                $this->settings->setSetting($key, ''.json_decode($value));
+            }
+        }
 	}
 
 	/**
