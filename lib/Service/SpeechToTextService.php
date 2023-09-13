@@ -53,6 +53,9 @@ class SpeechToTextService {
 		$audioPath = $this->convertToWav($path);
 
 		$threads = (int) $this->settings->getSetting('threads');
+        if ($threads <= 0) {
+            $threads = SettingsService::DEFAULTS['threads'];
+        }
 
 		$command = [
 			$this->getWhisperBinary(),
@@ -94,6 +97,9 @@ class SpeechToTextService {
 		$outputPath = $this->tempManager->getTemporaryFile('.wav');
 
 		$threads = (int) $this->settings->getSetting('threads');
+        if ($threads <= 0) {
+            $threads = SettingsService::DEFAULTS['threads'];
+        }
 
 		$command = [
 			$this->getFfmpegBinary(),
