@@ -1,6 +1,7 @@
 OC.L10N.register(
     "stt_whisper",
     {
+    "Whisper Speech-To-Text" : "Whisper语音转文本",
     "Speech-To-Text provider running OpenAI Whisper locally" : "在本地执行OpenAI Whisper模型语音转文本提供程序",
     "Status" : "状态",
     "Machine learning models have been downloaded successfully." : "机器学习模型已被成功下载。",
