@@ -2,6 +2,7 @@ OC.L10N.register(
     "stt_whisper",
     {
     "Status" : "Состояние",
+    "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Фоновые задания не выполняются через cron. Это приложение требует выполнения фоновых заданий через cron.",
     "Failed to load settings" : "Не удалось загрузить параметры",
     "Failed to save settings" : "Не удалось сохранить параметры"
 },

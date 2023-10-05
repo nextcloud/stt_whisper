@@ -1,5 +1,6 @@
 { "translations": {
     "Status" : "Состояние",
+    "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Фоновые задания не выполняются через cron. Это приложение требует выполнения фоновых заданий через cron.",
     "Failed to load settings" : "Не удалось загрузить параметры",
     "Failed to save settings" : "Не удалось сохранить параметры"
 },"pluralForm" :"nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);"
