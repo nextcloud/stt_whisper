@@ -48,7 +48,7 @@ appstore_package_name=$(appstore_build_directory)/$(app_name)
 npm=$(shell which npm 2> /dev/null)
 composer=$(shell which composer 2> /dev/null)
 
-all: models/small models/medium models/large bin/main bin/main-musl bin/main build
+all: bin/main bin/main-musl bin/main build
 
 whisper.cpp:
 	git clone https://github.com/ggerganov/whisper.cpp.git
