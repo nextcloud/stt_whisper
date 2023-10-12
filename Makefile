@@ -92,7 +92,6 @@ build:
 ifneq (,$(wildcard $(CURDIR)/composer.json))
 	make composer
 endif
-	make model
 ifneq (,$(wildcard $(CURDIR)/package.json))
 	make npm
 endif
@@ -122,16 +121,6 @@ ifeq (,$(wildcard $(CURDIR)/package.json))
 else
 	npm ci
 	npm run build
-endif
-
-.PHONY: model
-model:
-ifeq (,$(wildcard $(CURDIR)/models))
-	pip3 install "optimum[exporters]"
-	pip3 install "torch"
-	for LANG in $(LANGS); do
-		mkdir models/$LANG; optimum-cli export onnx --model Helsinki-NLP/opus-mt-$LANG --task seq2seq-lm --for-ort models/$LANG/
-	done
 endif
 
 .PHONY: pack-models
