@@ -137,7 +137,7 @@ export default {
 		try {
 			const settings = loadState('stt_whisper', 'settings')
 			for (const setting of SETTINGS) {
-				this.settings[setting] = JSON.parse(settings[setting])
+				this.settings[setting] = settings[setting]
 			}
 		} catch (e) {
 			this.error = this.t('stt_whisper', 'Failed to load settings')
