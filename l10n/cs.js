@@ -12,7 +12,7 @@ OC.L10N.register(
     "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Úlohy na pozadí nejsou vykonávány prostřednictvím plánovače cron. Tato aplikace ovšem vyžaduje, aby tomu tak bylo.",
     "The app was installed successfully and will transcribe files in background processes on request." : "Aplikace byla úspěšně nainstalována a na vyžádání bude v procesech na pozadí provádět přepis ze souborů do textu.",
     "Scheduled transcription Jobs: {scheduled}" : "Naplánované úlohy přepisu na text: {scheduled}",
-    "Transcription job currently running" : "Přávě probíhá úloha přepisu na text",
+    "Transcription job currently running" : "Právě probíhá úloha přepisu na text",
     "No transcription job currently running" : "V tuto chvíli neprobíhá žádná úloha přepisu na text",
     "Whisper" : "Whisper",
     "Select the machine learning model to be used for Speech-To-Text transcription. The larger the model the more resources like RAM, CPU and time are needed. However, the smaller the model, the less accurate the results will be. To use a model you need to download it using the following command:" : "Vyberte model strojového učení, který použít pro přepis řeči na text. Čím rozsáhlejší model, tím více je zapotřebí prostředků jako je operační paměť, výpočetní výkon a déle to trvá. Na druhou stranu, při použití méně rozsáhlých modelů se snižuje přesnost výsledků. Aby byl k dispozici, je třeba si požadovaný modul stáhnout pomocí následujícího příkazu:",
