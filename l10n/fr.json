@@ -4,6 +4,7 @@
     "Status" : "État",
     "Machine learning models have been downloaded successfully." : "Les modèles d'IA ont été téléchargés avec succès.",
     "The machine learning models still need to be downloaded (see below)." : "Les modèles d'intelligence artificielle doivent encore être téléchargés (voir ci-dessous).",
+    "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Les tâches en arrière-plan ne sont pas exécutées avec cron. Cette application exige que ces tâches soient exécutées par cron.",
     "Transcription job currently running" : "Travail de transcription en cours",
     "No transcription job currently running" : "Aucun travail de transcription n'est en cours",
     "Whisper" : "Whisper",
