@@ -2,7 +2,10 @@ OC.L10N.register(
     "stt_whisper",
     {
     "Status" : "Состояние",
+    "Machine learning models have been downloaded successfully." : "Модели машинного обучения успешно загружены.",
+    "The machine learning models still need to be downloaded (see below)." : "Модели машинного обучения еще необходимо загрузить (см. ниже).",
     "Background Jobs are not executed via cron. This app requires background jobs to be executed via cron." : "Фоновые задания не выполняются через cron. Это приложение требует выполнения фоновых заданий через cron.",
+    "Scheduled transcription Jobs: {scheduled}" : "Запланированные задания по транскрипции: {scheduled}",
     "Failed to load settings" : "Не удалось загрузить параметры",
     "Failed to save settings" : "Не удалось сохранить параметры"
 },
