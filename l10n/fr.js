@@ -16,7 +16,7 @@ OC.L10N.register(
     "FFmpeg" : "FFmpeg",
     "Checking FFmpeg" : "Vérification de FFmpeg",
     "FFmpeg executable was installed successfully and works." : "L'exécutable FFmpeg a été installé avec succès et fonctionne.",
-    "Failed to load settings" : "Echec du chargement des paramètres",
+    "Failed to load settings" : "Échec du chargement des paramètres",
     "Failed to save settings" : "Échec de l'enregistrement des paramètres"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
