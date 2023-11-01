@@ -33,11 +33,11 @@ Negative:
 Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud.com/blog/nextcloud-ethical-ai-rating/).
 
 ## Install
- * Place this app in **nextcloud/apps/**
 
-or 
-
- * Install from the Nextcloud appstore
+* Manual install
+    * Place this app in **nextcloud/apps/**
+* One click install
+    * Install from the [Nextcloud Appstore](https://apps.nextcloud.com/apps/stt_whisper)
 
 ### Download models
 
@@ -64,3 +64,17 @@ This requires the following things to be present:
 * curl: used if phpunit and composer are not installed to fetch them from the web
 * npm: for building and testing everything JS, only required if a package.json is placed inside the **js/** folder
 * gcc: for building whisper.cpp
+
+## NOTE
+
+A few things to keep in mind.
+
+* Transcriptions need to be enabled in the Talk app if you need the calls to be transcribed with any Speech to Text provider (including this app). It can be set using this `occ` command:
+
+```
+occ config:app:set spreed call_recording_transcription --value yes
+```
+
+* This app tends to be heavy on CPU. If it starts to be an issue in your normal workflow, you can limit the number of threads used by Whisper in the "Whisper Speech-To-Text" section in the admin settings
+* The generated transcriptions may vary in accuracy based on the spoken language.
+* Per participant transcription in calls is currently not available but PRs are welcome!
