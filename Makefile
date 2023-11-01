@@ -48,7 +48,7 @@ appstore_package_name=$(appstore_build_directory)/$(app_name)
 npm=$(shell which npm 2> /dev/null)
 composer=$(shell which composer 2> /dev/null)
 
-all: bin/main bin/main-musl bin/main build
+all: bin/main bin/main-musl build
 
 whisper.cpp:
 	git clone https://github.com/ggerganov/whisper.cpp.git
@@ -73,12 +73,12 @@ models/small: whisper.cpp/models/ggml-small.bin
 
 
 
-bin/main:
+bin/main: whisper.cpp
 	cd whisper.cpp && make clean && make
 	cp whisper.cpp/main bin/main
 
 
-bin/main-musl:
+bin/main-musl: whisper.cpp
 	cd whisper.cpp && make clean && make \
 	-E 'CFLAGS += -D_POSIX_SOURCE -D_GNU_SOURCE' \
 	-E 'CXXFLAGS += -D_POSIX_SOURCE -D_GNU_SOURCE'
