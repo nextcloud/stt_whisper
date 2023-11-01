@@ -28,9 +28,9 @@
 				{{ t('stt_whisper', 'Background Jobs are not executed via cron. This app requires background jobs to be executed via cron.') }}
 			</NcNoteCard>
 			<template v-if="ffmpeg && whisper && cron === 'cron'">
-					<NcNoteCard show-alert type="success">
-						{{ t('stt_whisper', 'The app was installed successfully and will transcribe files in background processes on request.') }}
-					</NcNoteCard>
+				<NcNoteCard show-alert type="success">
+					{{ t('stt_whisper', 'The app was installed successfully and will transcribe files in background processes on request.') }}
+				</NcNoteCard>
 				<NcNoteCard v-if="countJobs">
 					{{ t('recognize', 'Scheduled transcription Jobs: {scheduled}', { scheduled: countJobs.scheduled }) }}, {{ countJobs.running? t('recognize', 'Transcription job currently running') : t('recognize', 'No transcription job currently running') }}
 				</NcNoteCard>
@@ -39,20 +39,31 @@
 		<NcSettingsSection :title="t('stt_whisper', 'Whisper')">
 			<p>{{ t('stt_whisper', 'Select the machine learning model to be used for Speech-To-Text transcription. The larger the model the more resources like RAM, CPU and time are needed. However, the smaller the model, the less accurate the results will be. To use a model you need to download it using the following command:') }} <code>occ stt_whisper:download-models [small|medium|large]</code></p>
 			<p>
-				<NcCheckboxRadioSwitch :checked.sync="settings['model']" value="small" type="radio" @update:checked="onChange" :disabled="!modelsDownloaded['small']">
+				<NcCheckboxRadioSwitch :checked.sync="settings['model']"
+					value="small"
+					type="radio"
+					:disabled="!modelsDownloaded['small']"
+					@update:checked="onChange">
 					{{ t('stt_whisper', 'Small model (~1GB RAM, ~1x recording time, ~10-20% word error rate)') }}
 				</NcCheckboxRadioSwitch>
-				<NcCheckboxRadioSwitch :checked.sync="settings['model']" value="medium" type="radio" @update:checked="onChange" :disabled="!modelsDownloaded['medium']">
+				<NcCheckboxRadioSwitch :checked.sync="settings['model']"
+					value="medium"
+					type="radio"
+					:disabled="!modelsDownloaded['medium']"
+					@update:checked="onChange">
 					{{ t('stt_whisper', 'Medium model (~2GB RAM, ~3x recording time, ~7-15% word error rate)') }}
 				</NcCheckboxRadioSwitch>
-				<NcCheckboxRadioSwitch :checked.sync="settings['model']" value="large" type="radio" @update:checked="onChange" :disabled="!modelsDownloaded['large']">
+				<NcCheckboxRadioSwitch :checked.sync="settings['model']"
+					value="large"
+					type="radio"
+					:disabled="!modelsDownloaded['large']"
+					@update:checked="onChange">
 					{{ t('stt_whisper', 'Large model (~3.5GB RAM, ~5x recording time, ~4-12% word error rate)') }}
 				</NcCheckboxRadioSwitch>
 			</p>
 			<p>&nbsp;</p>
 			<p>
-				<NcTextField
-					:value.sync="settings['threads']"
+				<NcTextField :value.sync="settings['threads']"
 					:label-visible="true"
 					:label="t('stt_whisper', 'The number of threads to use (for both transcoding media files to audio as well as the transcription process)')"
 					@update:value="onChange" />
@@ -85,9 +96,9 @@ import { generateUrl } from '@nextcloud/router'
 import { loadState } from '@nextcloud/initial-state'
 
 const SETTINGS = [
-		'ffmpeg_binary',
-		'model',
-		'threads',
+	'ffmpeg_binary',
+	'model',
+	'threads',
 ]
 
 export default {
