@@ -1,11 +1,15 @@
 # SPDX-FileCopyrightText: Marcel Klehr <mklehr@gmx.net>
 # SPDX-License-Identifier: AGPL-3.0-or-later
 .idea
+.vscode
 *.iml
 /vendor/
 /vendor-bin
 /build/
 node_modules/
 /.php_cs.cache
+/.php-cs-fixer.cache
 js/
 /whisper.cpp
+bin/*
+models/*
