@@ -125,6 +125,10 @@ jobs:
         run: |
           ./occ app:enable -vvv ${{ env.APP_NAME }}
 
+      - name: Download the medium model
+        run: |
+          ./occ stt_whisper:download-models medium
+
       - name: Run transcription
         run: |
           ./occ stt_whisper:transcribe $(pwd)/apps/${{env.APP_NAME}}/test/fixtures/jfk.wav > output.txt
