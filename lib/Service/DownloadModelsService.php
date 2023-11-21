@@ -12,18 +12,16 @@ use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 
 class DownloadModelsService {
-	private IClientService $clientService;
-	private bool $isCLI;
-
 	public const AVAILABLE_MODELS = [
 		"small",
 		"medium",
 		"large",
 	];
 
-	public function __construct(IClientService $clientService, bool $isCLI) {
-		$this->clientService = $clientService;
-		$this->isCLI = $isCLI;
+	public function __construct(
+		private IClientService $clientService,
+		private bool $isCLI,
+	) {
 	}
 
 	/**
