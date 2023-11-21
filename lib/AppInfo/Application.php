@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace OCA\SttWhisper\AppInfo;
 
 use OCA\SttWhisper\Provider\SpeechToText;
+use OCA\SttWhisper\SetupChecks\BinaryFilesCheck;
 use OCA\SttWhisper\SetupChecks\ModelFilesCheck;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
@@ -23,6 +24,7 @@ class Application extends App implements IBootstrap {
 	public function register(IRegistrationContext $context): void {
 		$context->registerSpeechToTextProvider(SpeechToText::class);
 		$context->registerSetupCheck(ModelFilesCheck::class);
+		$context->registerSetupCheck(BinaryFilesCheck::class);
 	}
 
 	public function boot(IBootContext $context): void {
