@@ -33,6 +33,9 @@ class ModelFilesCheck implements ISetupCheck {
 		if (in_array(true, $modelsExist, true)) {
 			return SetupResult::success($this->l10n->t('Whisper Speech-To-Text models are downloaded'));
 		}
-		return SetupResult::error($this->l10n->t('Whisper Speech-To-Text models are not downloaded, please run `occ stt_whisper:download-models [small%1$smedium%1$slarge]` to download them', ['|', '|']));
+		return SetupResult::error($this->l10n->t(
+			'Whisper Speech-To-Text models are not downloaded, please run `occ stt_whisper:download-models [small%1$smedium%1$slarge]` to download them',
+			['|', '|']
+		));
 	}
 }
