@@ -15,13 +15,13 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class DownloadModels extends Command {
-	private DownloadModelsService $downloader;
-
 	public const DEFAULT_MODELS = [SettingsService::DEFAULTS['model']];
 
-	public function __construct(DownloadModelsService $downloader) {
+	public function __construct(
+		private DownloadModelsService $downloader,
+		private SettingsService $settings,
+	) {
 		parent::__construct();
-		$this->downloader = $downloader;
 	}
 
 	/**
@@ -50,7 +50,8 @@ class DownloadModels extends Command {
 			foreach ($models as $model) {
 				$output->writeln("Downloading model ".$model);
 				if ($this->downloader->download($model, $input->getOption('force'))) {
-					$output->writeln('Successful');
+					$output->writeln('Model download successful!');
+					$this->settings->setSetting('model', $model);
 				} else {
 					$output->writeln('Model is not available, skipping');
 				}
