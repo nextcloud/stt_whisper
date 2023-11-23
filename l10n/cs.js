@@ -2,6 +2,12 @@ OC.L10N.register(
     "stt_whisper",
     {
     "Whisper Speech-To-Text" : "Whisper - převod řeči na text",
+    "Could not execute the FFmpeg executable. You may need to set the path to a working executable manually in the \"Whisper Speech-To-Text app\" section of the admin settings." : "Nedaří se spustit soubor, obsahující FFmpeg. Může být třeba ručně nastavit popis umístění funkčního spustitelného souboru v nastaveních pro správu, sekci „Aplikace řeč-na-text Whisper“.",
+    "Could not execute the Whisper executable. You may need to compile Whisper yourself for it to run on this server's processor architecture." : "Nepodařilo se spustit soubor s Whisper. Nejspíš bude potřeba si Whisper zkompilovat sami pro spouštění na architektuře procesoru tohoto serveru.",
+    "It seems that your server processor does not support AVX instructions. Without AVX instructions Whisper app currently does not work." : "Zdá se, že procesor serveru nepodporuje instrukce AVX. Bez nich aplikace Whisper v současnosti nefunguje.",
+    "Whisper Speech-To-Text app binary files are present" : "Spustitelné soubory aplikace řeč-na-text Whisper jsou přítomné",
+    "Whisper Speech-To-Text models are downloaded" : "Spustitelné soubory aplikace řeč-na-text Whisper jsou stažené",
+    "Whisper Speech-To-Text models are not downloaded, please run `occ stt_whisper:download-models [small%1$smedium%1$slarge]` to download them" : "Spustitelné soubory aplikace řeč-na-text Whisper nejsou stažené – napravte to spuštěním příkazu `occ stt_whisper:download-models [small%1$smedium%1$slarge]` na serveru",
     "Speech-To-Text provider running OpenAI Whisper locally" : "Poskytovatel převodu řeči na text, pomocí OpenAI Whisper, provozovaném přímo na serveru",
     "Status" : "Stav",
     "Machine learning models have been downloaded successfully." : "Modely strojového učení byly úspěšně staženy.",
