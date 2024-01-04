@@ -44,6 +44,20 @@ Negative:
 * the training data is not freely available, limiting the ability of external parties to check and correct for bias or optimise the model’s performance and CO2 usage.
 
 Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud.com/blog/nextcloud-ethical-ai-rating/).
+
+NOTE:
+
+A few things to keep in mind.
+
+* Transcriptions need to be enabled in the Talk app if you need the calls to be transcribed with any Speech to Text provider (including this app). It can be set using this `occ` command:
+
+```
+occ config:app:set spreed call_recording_transcription --value yes
+```
+
+* This app tends to be heavy on CPU. If it starts to be an issue in your normal workflow, you can limit the number of threads used by Whisper in the "Whisper Speech-To-Text" section in the admin settings
+* The generated transcriptions may vary in accuracy based on the spoken language.
+* Per participant transcription in calls is currently not available but PRs are welcome!
 ]]></description>
     <version>1.0.7</version>
     <licence>agpl</licence>
