@@ -8,6 +8,7 @@ namespace OCA\SttWhisper\Command;
 
 use OCA\SttWhisper\Service\SpeechToTextService;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -24,9 +25,11 @@ class Transcribe extends Command {
 	 * @return void
 	 */
 	protected function configure() {
-		$this->setName('stt_whisper:transcribe')
+		$this
+			->setName('stt_whisper:transcribe')
 			->setDescription('Transcribe a media file')
-			->addArgument('path');
+			->addArgument('path', InputArgument::REQUIRED, 'The path to the media file to transcribe')
+		;
 	}
 
 	/**
@@ -39,7 +42,11 @@ class Transcribe extends Command {
 	 */
 	protected function execute(InputInterface $input, OutputInterface $output): int {
 		try {
-			$output->writeln($this->stt->transcribe($input->getArgument('path')));
+			$path = $input->getArgument('path');
+			if (!str_starts_with($path, '/')) {
+				$path = getcwd() . '/' . $path;
+			}
+			$output->writeln($this->stt->transcribe($path));
 			return 0;
 		} catch(\RuntimeException $e) {
 			$output->writeln($e->getMessage());
