@@ -50,7 +50,15 @@ class SpeechToTextService {
 			throw new \RuntimeException('Model not downloaded');
 		}
 
+		if (!file_exists($path)) {
+			throw new \RuntimeException('File not found');
+		}
+
+		$this->logger->debug('Transcribing ' . $path);
+
 		$audioPath = $this->convertToWav($path);
+
+		$this->logger->debug('Converted to ' . $audioPath);
 
 		$threads = (int) $this->settings->getSetting('threads');
 		if ($threads <= 0) {
@@ -73,24 +81,24 @@ class SpeechToTextService {
 		try {
 			$exitCode = $proc->run();
 			if ($exitCode !== 0) {
-				$this->logger->warning($proc->getErrorOutput());
+				$this->logger->error($proc->getErrorOutput());
 				throw new \RuntimeException('Whisper process failed');
 			}
 			$this->tempManager->clean();
 			return $proc->getOutput();
 		} catch (ProcessTimedOutException $e) {
 			$this->tempManager->clean();
-			$this->logger->warning($proc->getErrorOutput());
+			$this->logger->error($proc->getErrorOutput());
 			throw new \RuntimeException('Whisper process timeout');
 		} catch (RuntimeException $e) {
 			$this->tempManager->clean();
-			$this->logger->warning($proc->getErrorOutput());
+			$this->logger->error($proc->getErrorOutput());
 			throw new \RuntimeException('Whisper process failed');
 		}
 	}
 
 	/**
-	 * @param string $inputPath The media file to convert to wav
+	 * @param string $inputPath The media file to convert to 16kHz wav
 	 * @return string The converted wav audio file path
 	 */
 	public function convertToWav(string $inputPath): string {
