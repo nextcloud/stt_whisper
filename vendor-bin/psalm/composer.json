@@ -1,7 +1,6 @@
 {
 	"require-dev": {
-		"nextcloud/coding-standard": "^1.1",
-		"friendsofphp/php-cs-fixer": "^3.38"
+		"vimeo/psalm": "^5.9"
 	},
 	"config": {
 		"platform": {
