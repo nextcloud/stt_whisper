@@ -59,7 +59,7 @@ occ config:app:set spreed call_recording_transcription --value yes
 * The generated transcriptions may vary in accuracy based on the spoken language.
 * Per participant transcription in calls is currently not available but PRs are welcome!
 ]]></description>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <licence>agpl</licence>
     <author mail="mklehr@gmx.net" homepage="https://marcelklehr.de">Marcel Klehr</author>
     <namespace>SttWhisper</namespace>

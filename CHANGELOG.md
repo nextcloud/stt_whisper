@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.8] - 2024-01-10
+
+### Fixed
+
+- eslint issues
+- php lint issues
+- add step in transcribe-test.yml to download the medium model
+- set the model setting on model download
+- improve path handling in transcribe command
+- better logging
+- drop separate musl bin in favour of a static binary
+
+### Added
+
+- add setup check to verify if the models are downloaded
+- setup checks for binary files
+
 ## [1.0.7] - 2023-10-12
 
 ### Fixed
