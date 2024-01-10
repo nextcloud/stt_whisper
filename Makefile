@@ -48,7 +48,7 @@ appstore_package_name=$(appstore_build_directory)/$(app_name)
 npm=$(shell which npm 2> /dev/null)
 composer=$(shell which composer 2> /dev/null)
 
-all: bin/main bin/main-musl build
+all: main static build
 
 whisper.cpp:
 	git clone https://github.com/ggerganov/whisper.cpp.git
@@ -72,17 +72,18 @@ models/small: whisper.cpp/models/ggml-small.bin
 	cp whisper.cpp/models/ggml-small.bin models/small
 
 
-
-bin/main: whisper.cpp
+main: whisper.cpp
 	cd whisper.cpp && make clean && make
 	cp whisper.cpp/main bin/main
 
 
-bin/main-musl: whisper.cpp
-	cd whisper.cpp && make clean && make \
-	-E 'CFLAGS += -D_POSIX_SOURCE -D_GNU_SOURCE' \
-	-E 'CXXFLAGS += -D_POSIX_SOURCE -D_GNU_SOURCE'
-	cp whisper.cpp/main bin/main-musl
+# using clang due to the issues with libnss static linking on glibc/gcc
+# musl libc works fine
+static: whisper.cpp
+	cd whisper.cpp && make clean && \
+		CC="clang -static" CXX="clang++ -static" LDFLAGS="-lstdc++ -lc -lm" make
+	cp whisper.cpp/main bin/main
+
 
 # Fetches the PHP and JS dependencies and compiles the JS. If no composer.json
 # is present, the composer step is skipped, if no package.json or js/package.json
