@@ -146,7 +146,7 @@ class SpeechToTextService {
 	}
 
 	public function getWhisperBinary(): string {
-		return __DIR__ . '/../../bin/main' . ($this->isMusl()? '-musl' : '');
+		return __DIR__ . '/../../bin/main';
 	}
 
 	public function isAVXSupported(): bool {
@@ -157,18 +157,5 @@ class SpeechToTextService {
 		}
 
 		return $cpuinfo !== false && strpos($cpuinfo, 'avx') !== false;
-	}
-
-	public function isMusl(): ?bool {
-		try {
-			exec('ldd /bin/sh' . ' 2>&1', $output, $returnCode);
-		} catch (\Throwable $e) {
-		}
-
-		if ($returnCode !== 0) {
-			return null;
-		}
-
-		return str_contains(trim(implode("\n", $output)), 'musl');
 	}
 }

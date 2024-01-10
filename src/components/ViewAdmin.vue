@@ -115,7 +115,6 @@ export default {
 			timeout: null,
 			avx: undefined,
 			platform: undefined,
-			musl: undefined,
 			ffmpeg: undefined,
 			model: undefined,
 			threads: undefined,
@@ -136,7 +135,6 @@ export default {
 		this.getCountJobs()
 		this.getAVX()
 		this.getPlatform()
-		this.getMusl()
 		this.getCronStatus()
 		this.getWhisperStatus()
 		this.getFfmpegStatus()
@@ -170,11 +168,6 @@ export default {
 			const resp = await axios.get(generateUrl('/apps/stt_whisper/admin/platform'))
 			const { platform } = resp.data
 			this.platform = platform
-		},
-		async getMusl() {
-			const resp = await axios.get(generateUrl('/apps/stt_whisper/admin/musl'))
-			const { musl } = resp.data
-			this.musl = musl
 		},
 		async getCronStatus() {
 			const resp = await axios.get(generateUrl('/apps/stt_whisper/admin/cron'))

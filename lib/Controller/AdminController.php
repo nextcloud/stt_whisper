@@ -54,10 +54,6 @@ class AdminController extends Controller {
 		return new JSONResponse(['platform' => $lscpu['lscpu'][0]['data']]);
 	}
 
-	public function musl(): JSONResponse {
-		return new JSONResponse(['musl' => $this->stt->isMusl()]);
-	}
-
 	public function ffmpeg(): JSONResponse {
 		try {
 			exec($this->stt->getFfmpegBinary() . ' -version' . ' 2>&1', $output, $returnCode);

@@ -21,7 +21,6 @@ return [
 		['name' => 'admin#countJobs', 'url' => '/admin/countJobs', 'verb' => 'GET'],
 		['name' => 'admin#avx', 'url' => '/admin/avx', 'verb' => 'GET'],
 		['name' => 'admin#platform', 'url' => '/admin/platform', 'verb' => 'GET'],
-		['name' => 'admin#musl', 'url' => '/admin/musl', 'verb' => 'GET'],
 		['name' => 'admin#cron', 'url' => '/admin/cron', 'verb' => 'GET'],
 		['name' => 'admin#ffmpeg', 'url' => '/admin/ffmpeg', 'verb' => 'GET'],
 		['name' => 'admin#whisper', 'url' => '/admin/whisper', 'verb' => 'GET'],
