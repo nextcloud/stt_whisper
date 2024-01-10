@@ -6,6 +6,8 @@ OC.L10N.register(
     "Could not execute the Whisper executable. You may need to compile Whisper yourself for it to run on this server's processor architecture." : "Impossible d'exécuter le bianire Whisper. Vous avez peut-être besoin de le compiler vous-même pour l'exécuter sur l'architecture CPU de votre serveur.",
     "It seems that your server processor does not support AVX instructions. Without AVX instructions Whisper app currently does not work." : "Il semble que le processeur de votre serveur n'est pas compatible avec les instructions AVX. Sans instructions AVX, l'application Whisper ne peut fonctionner.",
     "Whisper Speech-To-Text app binary files are present" : "Les fichiers exécutables Whisper Speech-To-Text sont présents",
+    "Whisper Speech-To-Text models are downloaded" : "Les modèles Speech-To-Text Whisper sont téléchargés",
+    "Whisper Speech-To-Text models are not downloaded, please run `occ stt_whisper:download-models [small%1$smedium%1$slarge]` to download them" : "Les modèles Speech-To-Text Whisper ne sont pas téléchargés, veuillez exécuter `occ stt_whisper:download-models [small%1$smedium%1$slarge]` pour les télécharger",
     "Speech-To-Text provider running OpenAI Whisper locally" : "Un fournisseur de reconnaissance vocale utilisant OpenAI localement",
     "Status" : "État",
     "Machine learning models have been downloaded successfully." : "Les modèles d'IA ont été téléchargés avec succès.",
