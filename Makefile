@@ -77,11 +77,10 @@ main: whisper.cpp
 	cp whisper.cpp/main bin/main
 
 
-# using clang due to the issues with libnss static linking on glibc/gcc
-# musl libc works fine
+# due to the issues with libnss static linking on glibc, use a musl system
 static: whisper.cpp
 	cd whisper.cpp && make clean && \
-		CC="clang -static" CXX="clang++ -static" LDFLAGS="-lstdc++ -lc -lm" make
+		CC="gcc -static" CXX="g++ -static -latomic" LDFLAGS="-lstdc++ -lc -lm" make
 	cp whisper.cpp/main bin/main
 
 
