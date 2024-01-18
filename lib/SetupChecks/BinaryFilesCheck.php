@@ -44,7 +44,7 @@ class BinaryFilesCheck implements ISetupCheck {
 
 	private function isBinaryPresent(string $command): bool {
 		try {
-			exec($command, $output, $returnCode);
+			exec($command . ' 2>&1 /dev/null', $output, $returnCode);
 		} catch (\Throwable $e) {
 			return false;
 		}
